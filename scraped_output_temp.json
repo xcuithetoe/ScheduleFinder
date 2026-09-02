@@ -1,0 +1,728 @@
+{
+  "PHYSICS0001B": {
+    "course": {
+      "title": "1B - Physics for Scientists and Engineers: Oscillations, Waves, Electric and Magnetic Fields",
+      "course_code": "PHYSICS0001B"
+    },
+    "lectures": [
+      {
+        "section_id": "Lec 1",
+        "instructor": "Wang, G.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 175,
+          "capacity": 187,
+          "spots_left": 12
+        },
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "TR",
+            "time": "10am-11:50am",
+            "location": "Physics and Astronomy Building 1425"
+          }
+        ],
+        "discussions": [
+          {
+            "section_id": "Dis 1A",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 41,
+              "capacity": 47,
+              "spots_left": 6
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "8am-8:50am",
+                "location": "Physics and Astronomy Building 2434"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1B",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 43,
+              "capacity": 47,
+              "spots_left": 4
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9am-9:50am",
+                "location": "Physics and Astronomy Building 2434"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1C",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 46,
+              "capacity": 47,
+              "spots_left": 1
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "1pm-1:50pm",
+                "location": "Physics and Astronomy Building 2434"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1D",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 45,
+              "capacity": 46,
+              "spots_left": 1
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "2pm-2:50pm",
+                "location": "Physics and Astronomy Building 2434"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "Lec 2",
+        "instructor": "Wang, G.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 102,
+          "capacity": 168,
+          "spots_left": 66
+        },
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "TR",
+            "time": "12pm-1:50pm",
+            "location": "Kinsey Science Teaching Pavilion 1220B"
+          }
+        ],
+        "discussions": [
+          {
+            "section_id": "Dis 2A",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 15,
+              "capacity": 39,
+              "spots_left": 24
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "M",
+                "time": "8am-8:50am",
+                "location": "Physics and Astronomy Building 2748"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2B",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 21,
+              "capacity": 39,
+              "spots_left": 18
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "M",
+                "time": "9am-9:50am",
+                "location": "Physics and Astronomy Building 2748"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2C",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 44,
+              "capacity": 47,
+              "spots_left": 3
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "M",
+                "time": "4pm-4:50pm",
+                "location": "Physics and Astronomy Building 2434"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2D",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 22,
+              "capacity": 43,
+              "spots_left": 21
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "M",
+                "time": "5pm-5:50pm",
+                "location": "Physics and Astronomy Building 2434"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "PHYSICS0001AH": {
+    "course": {
+      "title": "1AH - Physics for Scientists and Engineers: Mechanics (Honors)",
+      "course_code": "PHYSICS0001AH"
+    },
+    "lectures": [
+      {
+        "section_id": "Lec 1",
+        "instructor": "Bozovic, D.",
+        "status": "Closed",
+        "enrollment": null,
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "TR",
+            "time": "12pm-1:50pm",
+            "location": "Physics and Astronomy Building 1434A"
+          }
+        ],
+        "discussions": [
+          {
+            "section_id": "Dis 1A",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "F",
+                "time": "8am-8:50am",
+                "location": "Physics and Astronomy Building 1434A"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "MATH0033A": {
+    "course": {
+      "title": "33A - Linear Algebra and Applications",
+      "course_code": "MATH0033A"
+    },
+    "lectures": [
+      {
+        "section_id": "Lec 1",
+        "instructor": "Yeong, W.",
+        "status": "Closed",
+        "enrollment": null,
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "MWF",
+            "time": "9am-9:50am",
+            "location": "Bunche Hall 2209A"
+          }
+        ],
+        "discussions": [
+          {
+            "section_id": "Dis 1A",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9am-9:50am",
+                "location": "Mathematical Sciences 5137"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1B",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "9am-9:50am",
+                "location": "Mathematical Sciences 5137"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1C",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9am-9:50am",
+                "location": "Rolfe Hall 3121"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1D",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "9am-9:50am",
+                "location": "Rolfe Hall 3121"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1E",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9am-9:50am",
+                "location": "Royce Hall 156"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 1F",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "9am-9:50am",
+                "location": "Royce Hall 156"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "Lec 2",
+        "instructor": "Ma, S.",
+        "status": "Closed",
+        "enrollment": null,
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "MWF",
+            "time": "11am-11:50am",
+            "location": "Bunche Hall 2209A"
+          }
+        ],
+        "discussions": [
+          {
+            "section_id": "Dis 2A",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "11am-11:50am",
+                "location": "Mathematical Sciences 5137"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2B",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "11am-11:50am",
+                "location": "Mathematical Sciences 5137"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2C",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "11am-11:50am",
+                "location": "Mathematical Sciences 5138"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2D",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "11am-11:50am",
+                "location": "Mathematical Sciences 5138"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2E",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "11am-11:50am",
+                "location": "Rolfe Hall 3129"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 2F",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "11am-11:50am",
+                "location": "Rolfe Hall 3129"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "Lec 3",
+        "instructor": "Sempliner, J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 193,
+          "capacity": 194,
+          "spots_left": 1
+        },
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "MWF",
+            "time": "12pm-12:50pm",
+            "location": "Bunche Hall 1209B"
+          }
+        ],
+        "discussions": [
+          {
+            "section_id": "Dis 3A",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "12pm-12:50pm",
+                "location": "Bunche Hall 2178"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 3B",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "12pm-12:50pm",
+                "location": "Bunche Hall 2178"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 3C",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "12pm-12:50pm",
+                "location": "Boelter Hall 5419"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 3D",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "12pm-12:50pm",
+                "location": "No Location"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 3E",
+            "instructor": "TA",
+            "status": "Closed",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "12pm-12:50pm",
+                "location": "Boelter Hall 5440"
+              }
+            ]
+          },
+          {
+            "section_id": "Dis 3F",
+            "instructor": "TA",
+            "status": "Open",
+            "enrollment": {
+              "enrolled": 26,
+              "capacity": 27,
+              "spots_left": 1
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "12pm-12:50pm",
+                "location": "Boelter Hall 5440"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ENGR0001AR": {
+    "course": {
+      "title": "1AR - Introduction to Engineering Design: Autonomous Rover",
+      "course_code": "ENGR0001AR"
+    },
+    "lectures": [
+      {
+        "section_id": "Lab 1",
+        "instructor": "Schmidt, J.J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 8,
+          "capacity": 20,
+          "spots_left": 12
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 2
+        },
+        "meetings": [
+          {
+            "days": "W",
+            "time": "3pm-5:50pm",
+            "location": "Mathematical Sciences 2915"
+          }
+        ],
+        "discussions": []
+      }
+    ]
+  },
+  "ENGR0001BI": {
+    "course": {
+      "title": "1BI - Introduction to Engineering Design: Bionics",
+      "course_code": "ENGR0001BI"
+    },
+    "lectures": [
+      {
+        "section_id": "Lab 1",
+        "instructor": "Schmidt, J.J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 4,
+          "capacity": 20,
+          "spots_left": 16
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 2
+        },
+        "meetings": [
+          {
+            "days": "W",
+            "time": "9am-11:50am",
+            "location": "Mathematical Sciences 2915"
+          }
+        ],
+        "discussions": []
+      }
+    ]
+  },
+  "ENGR0001CR": {
+    "course": {
+      "title": "1CR - Introduction to Engineering Design: Combat Robotics",
+      "course_code": "ENGR0001CR"
+    },
+    "lectures": [
+      {
+        "section_id": "Lab 1",
+        "instructor": "Schmidt, J.J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 11,
+          "capacity": 20,
+          "spots_left": 9
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 2
+        },
+        "meetings": [
+          {
+            "days": "R",
+            "time": "12pm-2:50pm",
+            "location": "Boelter Hall 3760"
+          }
+        ],
+        "discussions": []
+      }
+    ]
+  },
+  "ENGR0001DR": {
+    "course": {
+      "title": "1DR - Introduction to Engineering Design: Drones",
+      "course_code": "ENGR0001DR"
+    },
+    "lectures": [
+      {
+        "section_id": "Lab 1",
+        "instructor": "Schmidt, J.J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 6,
+          "capacity": 20,
+          "spots_left": 14
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 2
+        },
+        "meetings": [
+          {
+            "days": "T",
+            "time": "9am-11:50am",
+            "location": "Mathematical Sciences 2915"
+          }
+        ],
+        "discussions": []
+      }
+    ]
+  },
+  "ENGR0001EC": {
+    "course": {
+      "title": "1EC - Introduction to Engineering Design: Electrocardiogram",
+      "course_code": "ENGR0001EC"
+    },
+    "lectures": [
+      {
+        "section_id": "Lab 1",
+        "instructor": "Schmidt, J.J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 5,
+          "capacity": 20,
+          "spots_left": 15
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 2
+        },
+        "meetings": [
+          {
+            "days": "F",
+            "time": "12pm-2:50pm",
+            "location": "Mathematical Sciences 2915"
+          }
+        ],
+        "discussions": []
+      }
+    ]
+  },
+  "ENGR0001GK": {
+    "course": {
+      "title": "1GK - Introduction to Engineering Design: Go-Karts",
+      "course_code": "ENGR0001GK"
+    },
+    "lectures": [
+      {
+        "section_id": "Lab 1",
+        "instructor": "Schmidt, J.J.",
+        "status": "Open",
+        "enrollment": {
+          "enrolled": 8,
+          "capacity": 20,
+          "spots_left": 12
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 2
+        },
+        "meetings": [
+          {
+            "days": "M",
+            "time": "3pm-5:50pm",
+            "location": "Mathematical Sciences 2915"
+          }
+        ],
+        "discussions": []
+      }
+    ]
+  }
+}

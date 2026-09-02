@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Custom scrollbar for a minimalist look */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-transparent text-[var(--foreground)] antialiased p-2 sm:p-5">
+  <div class="bg-[var(--card)] text-[var(--foreground)] border border-[var(--border)] rounded-xl p-4 sm:p-6 shadow-sm mx-auto w-full max-w-5xl">
+    
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+      <div>
+        <h2 class="text-[var(--foreground)] font-semibold text-xl">UCLA Fall 2026 Schedules</h2>
+        <p class="text-[var(--muted-foreground)] text-sm mt-1" id="schedule-desc">Rank 1: The Balanced Optimizer (70m min gap)</p>
+      </div>
+      
+      <div class="flex bg-[var(--background)] p-1 rounded-lg border border-[var(--border)]">
+        <button onclick="setSchedule(0)" id="btn-0" class="px-3 py-1.5 text-sm rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow transition-colors">Rank 1</button>
+        <button onclick="setSchedule(1)" id="btn-1" class="px-3 py-1.5 text-sm rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">Rank 2</button>
+        <button onclick="setSchedule(2)" id="btn-2" class="px-3 py-1.5 text-sm rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">Rank 3</button>
+      </div>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div class="relative overflow-x-auto">
+      <div class="min-w-[600px]">
+        <!-- Header -->
+        <div class="grid grid-cols-[60px_1fr_1fr_1fr_1fr_1fr] gap-2 border-b border-[var(--border)] pb-2 mb-2 text-sm font-medium text-[var(--muted-foreground)] text-center">
+          <div></div>
+          <div>Monday</div>
+          <div>Tuesday</div>
+          <div>Wednesday</div>
+          <div>Thursday</div>
+          <div>Friday</div>
+        </div>
+        
+        <!-- Calendar Body -->
+        <div class="grid grid-cols-[60px_1fr_1fr_1fr_1fr_1fr] gap-2 relative h-[540px]">
+          <!-- Time Labels -->
+          <div class="flex flex-col justify-between text-xs text-[var(--muted-foreground)] py-1 text-right pr-2">
+            <div>9 AM</div>
+            <div>10 AM</div>
+            <div>11 AM</div>
+            <div>12 PM</div>
+            <div>1 PM</div>
+            <div>2 PM</div>
+            <div>3 PM</div>
+            <div>4 PM</div>
+            <div>5 PM</div>
+            <div>6 PM</div>
+          </div>
+          
+          <!-- Background Grid Lines -->
+          <div class="absolute inset-0 left-[60px] flex flex-col justify-between pointer-events-none">
+            <div class="w-full h-px bg-[var(--border)] opacity-30 mt-1"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30"></div>
+            <div class="w-full h-px bg-[var(--border)] opacity-30 mb-1"></div>
+          </div>
+
+          <!-- Day Columns -->
+          <div id="col-0" class="relative"></div>
+          <div id="col-1" class="relative"></div>
+          <div id="col-2" class="relative"></div>
+          <div id="col-3" class="relative"></div>
+          <div id="col-4" class="relative"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-6 flex flex-wrap gap-4 text-xs">
+      <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-blue-500/20 border border-blue-500/50"></span> <span class="text-[var(--muted-foreground)]">Math 32A</span></div>
+      <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50"></span> <span class="text-[var(--muted-foreground)]">CS 32</span></div>
+      <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-purple-500/20 border border-purple-500/50"></span> <span class="text-[var(--muted-foreground)]">ENGR 1IT</span></div>
+      <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-orange-500/20 border border-orange-500/50"></span> <span class="text-[var(--muted-foreground)]">EC ENGR 1</span></div>
+    </div>
+  </div>
+
+  <script>
+    const schedules = [
+      {
+        desc: "Rank 1: The Balanced Optimizer (70m min gap)",
+        classes: [
+          // Math 32A
+          { title: "Math 32A Lec 5", days: [0, 2, 4], start: 13*60, end: 13*60+50, color: "blue" },
+          { title: "Math 32A Dis 5F", days: [3], start: 13*60, end: 13*60+50, color: "blue" },
+          // CS 32
+          { title: "CS 32 Lec 1", days: [1, 3], start: 16*60, end: 17*60+50, color: "green" },
+          { title: "CS 32 Dis 1E", days: [4], start: 16*60, end: 17*60+50, color: "green" },
+          // ENGR 1IT
+          { title: "ENGR 1IT Lec 1", days: [0], start: 9*60, end: 9*60+50, color: "purple" },
+          { title: "ENGR 1IT Lab 1C", days: [4], start: 11*60, end: 11*60+50, color: "purple" },
+          // EC ENGR 1
+          { title: "EC ENGR 1 Sem", days: [0], start: 17*60, end: 17*60+50, color: "orange" },
+        ]
+      },
+      {
+        desc: "Rank 2: The Absolute Maximum Gap (130m min gap)",
+        classes: [
+          { title: "Math 32A Lec 5", days: [0, 2, 4], start: 13*60, end: 13*60+50, color: "blue" },
+          { title: "Math 32A Dis 5F", days: [3], start: 13*60, end: 13*60+50, color: "blue" },
+          { title: "CS 32 Lec 1", days: [1, 3], start: 16*60, end: 17*60+50, color: "green" },
+          { title: "CS 32 Dis 1E", days: [4], start: 16*60, end: 17*60+50, color: "green" },
+          { title: "ENGR 1IT Lec 1", days: [0], start: 9*60, end: 9*60+50, color: "purple" },
+          { title: "ENGR 1IT Lab 1B", days: [4], start: 10*60, end: 10*60+50, color: "purple" },
+          { title: "EC ENGR 1 Sem", days: [0], start: 17*60, end: 17*60+50, color: "orange" },
+        ]
+      },
+      {
+        desc: "Rank 3: The Early-Day Compact Schedule (10m min gap)",
+        classes: [
+          { title: "Math 32A Lec 2", days: [0, 2, 4], start: 10*60, end: 10*60+50, color: "blue" },
+          { title: "Math 32A Dis 2D", days: [3], start: 10*60, end: 10*60+50, color: "blue" },
+          { title: "CS 32 Lec 1", days: [1, 3], start: 16*60, end: 17*60+50, color: "green" },
+          { title: "CS 32 Dis 1E", days: [4], start: 16*60, end: 17*60+50, color: "green" },
+          { title: "ENGR 1IT Lec 1", days: [0], start: 9*60, end: 9*60+50, color: "purple" },
+          { title: "ENGR 1IT Lab 1C", days: [4], start: 11*60, end: 11*60+50, color: "purple" },
+          { title: "EC ENGR 1 Sem", days: [0], start: 17*60, end: 17*60+50, color: "orange" },
+        ]
+      }
+    ];
+
+    const CAL_START = 9 * 60; // 9 AM
+    const CAL_END = 18 * 60; // 6 PM
+    const TOTAL_MINS = CAL_END - CAL_START;
+
+    function formatTime(mins) {
+      const h = Math.floor(mins / 60);
+      const m = mins % 60;
+      const ampm = h >= 12 ? 'PM' : 'AM';
+      const h12 = h % 12 || 12;
+      return `${h12}:${m.toString().padStart(2, '0')} ${ampm}`;
+    }
+
+    function renderClass(cls) {
+      const top = ((cls.start - CAL_START) / TOTAL_MINS) * 100;
+      const height = ((cls.end - cls.start) / TOTAL_MINS) * 100;
+      
+      const colors = {
+        blue: "bg-blue-500/10 border-blue-500/30 text-blue-700 dark:text-blue-300",
+        green: "bg-green-500/10 border-green-500/30 text-green-700 dark:text-green-300",
+        purple: "bg-purple-500/10 border-purple-500/30 text-purple-700 dark:text-purple-300",
+        orange: "bg-orange-500/10 border-orange-500/30 text-orange-700 dark:text-orange-300"
+      };
+
+      return `
+        <div class="absolute left-0 right-0 rounded-md border p-1.5 overflow-hidden shadow-sm transition-transform hover:scale-[1.02] hover:z-10 ${colors[cls.color]}" 
+             style="top: ${top}%; height: ${height}%;">
+          <div class="font-semibold text-xs leading-tight">${cls.title}</div>
+          <div class="text-[10px] opacity-80 mt-0.5">${formatTime(cls.start)} - ${formatTime(cls.end)}</div>
+        </div>
+      `;
+    }
+
+    function setSchedule(index) {
+      // Update buttons
+      for(let i=0; i<3; i++) {
+        const btn = document.getElementById(`btn-${i}`);
+        if(i === index) {
+          btn.className = "px-3 py-1.5 text-sm rounded-md bg-[var(--primary)] text-[var(--primary-foreground)] shadow transition-colors";
+        } else {
+          btn.className = "px-3 py-1.5 text-sm rounded-md text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors";
+        }
+      }
+
+      // Update desc
+      document.getElementById('schedule-desc').innerText = schedules[index].desc;
+
+      // Clear columns
+      for(let d=0; d<5; d++) {
+        document.getElementById(`col-${d}`).innerHTML = '';
+      }
+
+      // Render classes
+      schedules[index].classes.forEach(cls => {
+        cls.days.forEach(day => {
+          if(day >= 0 && day <= 4) {
+            document.getElementById(`col-${day}`).innerHTML += renderClass(cls);
+          }
+        });
+      });
+    }
+
+    // Init
+    setSchedule(0);
+  </script>
+</body>
+</html>
