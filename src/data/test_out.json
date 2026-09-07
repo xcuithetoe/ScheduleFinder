@@ -1,0 +1,1423 @@
+{
+  "AOSCI0001": {
+    "course": {
+      "title": "1 - Climate Change: From Puzzles to Policy",
+      "course_code": "AOSCI0001"
+    },
+    "lectures": [
+      {
+        "section_id": "Lec 1",
+        "indicator": "info",
+        "indicator_label": "Class Requisite Information",
+        "instructor": "Bianchi, D.\nTA",
+        "status": "Open",
+        "units": "4.0",
+        "enrollment": {
+          "enrolled": 134,
+          "capacity": 180,
+          "spots_left": 46
+        },
+        "waitlist": {
+          "taken": 0,
+          "capacity": 12
+        },
+        "meetings": [
+          {
+            "days": "TR",
+            "time": "3:30pm-4:45pm",
+            "location": "Franz Hall 1260"
+          }
+        ],
+        "class_id": "126004200",
+        "class_no": "001",
+        "discussions": [
+          {
+            "section_id": "Dis 1A",
+            "indicator": "info",
+            "indicator_label": "Class Requisite Information",
+            "instructor": "TA",
+            "status": "Waitlist",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 2
+            },
+            "meetings": [
+              {
+                "days": "R",
+                "time": "12pm-12:50pm",
+                "location": "Mathematical Sciences 7124A"
+              }
+            ],
+            "class_id": "126004201",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": null,
+              "raw": []
+            },
+            "class_notes": [],
+            "requisites": [],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1B",
+            "indicator": "info",
+            "indicator_label": "Class Requisite Information",
+            "instructor": "TA",
+            "status": "Waitlist",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 2
+            },
+            "meetings": [
+              {
+                "days": "R",
+                "time": "1pm-1:50pm",
+                "location": "Mathematical Sciences 7124A"
+              }
+            ],
+            "class_id": "126004202",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": null,
+              "raw": []
+            },
+            "class_notes": [],
+            "requisites": [],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1C",
+            "indicator": "info",
+            "indicator_label": "Class Requisite Information",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 29,
+              "capacity": 30,
+              "spots_left": 1
+            },
+            "waitlist": {
+              "taken": 0,
+              "capacity": 2
+            },
+            "meetings": [
+              {
+                "days": "R",
+                "time": "2pm-2:50pm",
+                "location": "Mathematical Sciences 7124A"
+              }
+            ],
+            "class_id": "126004203",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": null,
+              "raw": []
+            },
+            "class_notes": [],
+            "requisites": [],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1D",
+            "indicator": "info",
+            "indicator_label": "Class Requisite Information",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 13,
+              "capacity": 30,
+              "spots_left": 17
+            },
+            "waitlist": {
+              "taken": 0,
+              "capacity": 2
+            },
+            "meetings": [
+              {
+                "days": "F",
+                "time": "10am-10:50am",
+                "location": "Mathematical Sciences 7124B"
+              }
+            ],
+            "class_id": "126004204",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": null,
+              "raw": []
+            },
+            "class_notes": [],
+            "requisites": [],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1E",
+            "indicator": "info",
+            "indicator_label": "Class Requisite Information",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 15,
+              "capacity": 30,
+              "spots_left": 15
+            },
+            "waitlist": {
+              "taken": 0,
+              "capacity": 2
+            },
+            "meetings": [
+              {
+                "days": "F",
+                "time": "11am-11:50am",
+                "location": "Mathematical Sciences 7124B"
+              }
+            ],
+            "class_id": "126004205",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": null,
+              "raw": []
+            },
+            "class_notes": [],
+            "requisites": [],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1F",
+            "indicator": "info",
+            "indicator_label": "Class Requisite Information",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 17,
+              "capacity": 30,
+              "spots_left": 13
+            },
+            "waitlist": {
+              "taken": 0,
+              "capacity": 2
+            },
+            "meetings": [
+              {
+                "days": "F",
+                "time": "12pm-12:50pm",
+                "location": "Mathematical Sciences 7124B"
+              }
+            ],
+            "class_id": "126004206",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": null,
+              "raw": []
+            },
+            "class_notes": [],
+            "requisites": [],
+            "grade_type": "Non-Graded"
+          }
+        ],
+        "final_exam": {
+          "date": "December 10, 2026",
+          "day": "Thursday",
+          "time": "8am-11am",
+          "location": "Check back on 11/23/2026 (Monday of 9th week) for final exam location"
+        },
+        "restrictions": [
+          "Class: None"
+        ],
+        "class_notes": [],
+        "requisites": [],
+        "grading": "Letter Grade or Passed/ Not Passed",
+        "impacted": "No",
+        "level": "Lower Division",
+        "course_description": "Lecture, three hours; discussion, one hour. Overview of fundamentals of Earth's climate, including greenhouse effect, water and chemical cycles, outstanding features of atmospheric and ocean circulation, and feedback between different system components. Exciting and contentious scientific puzzles of climate system, including causes of ice ages, greenhouse warming, and el niño. Importance of climate science and prediction to society, with emphasis on science's role in identifying, qualifying, and solving environmental problems such as ozone hole and greenhouse warming. P/NP or letter grading.",
+        "ge_categories": [
+          "Foundations of Scientific Inquiry—Physical Sciences"
+        ],
+        "ge_lab_demo": false,
+        "writing_ii": false,
+        "diversity": false,
+        "department": "Atmospheric and Oceanic Sciences",
+        "department_url": "http://www.atmos.ucla.edu",
+        "textbooks_url": "https://shib.asucla.ucla.edu/CourseRedirect/CoursesRed.html?catids=26F126004200",
+        "library_reserve_url": "https://search.library.ucla.edu/discovery/search?tab=CourseReserves&search_scope=CourseReserves&vid=01UCS_LAL:UCLA&lang=en&mode=advanced",
+        "materials_fee": "0.00",
+        "effective_discussion_restrictions": {
+          "distinct_restrictions": [],
+          "has_restricted_discussions": false,
+          "all_discussions_restricted": false,
+          "all_open_discussions_restricted": false,
+          "open_discussions_restrictions": []
+        }
+      }
+    ]
+  },
+  "CHEM0014A": {
+    "course": {
+      "title": "14A - General Chemistry for Life Scientists I",
+      "course_code": "CHEM0014A"
+    },
+    "lectures": [
+      {
+        "section_id": "Lec 1",
+        "indicator": "warning",
+        "indicator_label": "Class Requisite Warning",
+        "instructor": "Lavelle, L.",
+        "status": "Open",
+        "units": "4.0",
+        "enrollment": {
+          "enrolled": 287,
+          "capacity": 288,
+          "spots_left": 1
+        },
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "MWF",
+            "time": "10am-10:50am",
+            "location": "Young Hall CS50"
+          }
+        ],
+        "class_id": "142042200",
+        "class_no": "001",
+        "discussions": [
+          {
+            "section_id": "Dis 1A",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "9am-9:50am",
+                "location": "Franz Hall 2258A"
+              }
+            ],
+            "class_id": "142042201",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1B",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "10am-10:50am",
+                "location": "Franz Hall 2258A"
+              }
+            ],
+            "class_id": "142042202",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1C",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "W",
+                "time": "11am-11:50am",
+                "location": "Young Hall 2033"
+              }
+            ],
+            "class_id": "142042203",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1D",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "W",
+                "time": "2pm-2:50pm",
+                "location": "Renee and David Kaplan Hall A65"
+              }
+            ],
+            "class_id": "142042204",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1E",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "9am-9:50am",
+                "location": "Franz Hall 2258A"
+              }
+            ],
+            "class_id": "142042205",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 1F",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 47,
+              "capacity": 48,
+              "spots_left": 1
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "3pm-3:50pm",
+                "location": "Young Hall 4216"
+              }
+            ],
+            "class_id": "142042206",
+            "class_no": "001",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          }
+        ],
+        "final_exam": {
+          "date": "December 6, 2026",
+          "day": "Sunday",
+          "time": "11:30am-2:30pm",
+          "location": "Check back on 11/23/2026 (Monday of 9th week) for final exam location"
+        },
+        "restrictions": [
+          "Class: New Students Only"
+        ],
+        "class_notes": [
+          "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+          "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+          "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+          "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+          "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+          "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+          "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+          "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+          "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+        ],
+        "requisites": [
+          {
+            "course": "Mathematics 3A",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Mathematics 31A",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Mathematics 31AL",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Life Sciences 30A",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Math Diagnostic Test",
+            "min_grade": ">=80% (48/60)",
+            "is_prereq": true,
+            "is_coreq": false,
+            "type": "Warning"
+          }
+        ],
+        "grading": "Letter Grade or Passed/ Not Passed",
+        "impacted": "No",
+        "level": "Lower Division",
+        "course_description": "Lecture, three hours; discussion, one hour. Preparation: high school chemistry or equivalent background and three and one half years of high school mathematics. Requisite: completion of Chemistry Diagnostic Test. Enforced corequisite: Life Sciences 30A or Mathematics 3A or 31A or score of 48 or better on Mathematics Diagnostic Test. Not open to students with credit for course 20A. Introduction to physical and general chemistry principles; atomic structure based on quantum mechanics; atomic properties; trends in periodic table; chemical bonding (Lewis structures, VSEPR theory, hybridization, and molecular orbital theory); coordination compounds; properties of inorganic and organic acids, bases, buffers. P/NP or letter grading.",
+        "ge_categories": [
+          "Foundations of Scientific Inquiry—Physical Sciences"
+        ],
+        "ge_lab_demo": false,
+        "writing_ii": false,
+        "diversity": false,
+        "department": "Chemistry and Biochemistry",
+        "department_url": "http://www.chemistry.ucla.edu",
+        "textbooks_url": "https://shib.asucla.ucla.edu/CourseRedirect/CoursesRed.html?catids=26F142042200",
+        "library_reserve_url": "https://search.library.ucla.edu/discovery/search?tab=CourseReserves&search_scope=CourseReserves&vid=01UCS_LAL:UCLA&lang=en&mode=advanced",
+        "materials_fee": "0.00",
+        "effective_discussion_restrictions": {
+          "distinct_restrictions": [],
+          "has_restricted_discussions": false,
+          "all_discussions_restricted": false,
+          "all_open_discussions_restricted": false,
+          "open_discussions_restrictions": []
+        }
+      },
+      {
+        "section_id": "Lec 2",
+        "indicator": "warning",
+        "indicator_label": "Class Requisite Warning",
+        "instructor": "Lavelle, L.",
+        "status": "Open",
+        "units": "4.0",
+        "enrollment": {
+          "enrolled": 283,
+          "capacity": 288,
+          "spots_left": 5
+        },
+        "waitlist": null,
+        "meetings": [
+          {
+            "days": "MWF",
+            "time": "1pm-1:50pm",
+            "location": "Young Hall CS50"
+          }
+        ],
+        "class_id": "142042220",
+        "class_no": "002",
+        "discussions": [
+          {
+            "section_id": "Dis 2A",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "10am-10:50am",
+                "location": "Young Hall 2033"
+              }
+            ],
+            "class_id": "142042221",
+            "class_no": "002",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 2B",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "2pm-2:50pm",
+                "location": "Young Hall 4216"
+              }
+            ],
+            "class_id": "142042222",
+            "class_no": "002",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 2C",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 44,
+              "capacity": 47,
+              "spots_left": 3
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "T",
+                "time": "3pm-3:50pm",
+                "location": "Young Hall 2033"
+              }
+            ],
+            "class_id": "142042223",
+            "class_no": "002",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 2D",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Closed",
+            "units": "0.0",
+            "enrollment": null,
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "W",
+                "time": "3pm-3:50pm",
+                "location": "Young Hall 2200"
+              }
+            ],
+            "class_id": "142042224",
+            "class_no": "002",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 2E",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 46,
+              "capacity": 47,
+              "spots_left": 1
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "10am-10:50am",
+                "location": "Franz Hall 2258A"
+              }
+            ],
+            "class_id": "142042225",
+            "class_no": "002",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          },
+          {
+            "section_id": "Dis 2F",
+            "indicator": "warning",
+            "indicator_label": "Class Requisite Warning",
+            "instructor": "TA",
+            "status": "Open",
+            "units": "0.0",
+            "enrollment": {
+              "enrolled": 47,
+              "capacity": 48,
+              "spots_left": 1
+            },
+            "waitlist": null,
+            "meetings": [
+              {
+                "days": "R",
+                "time": "2pm-2:50pm",
+                "location": "Young Hall 4216"
+              }
+            ],
+            "class_id": "142042226",
+            "class_no": "002",
+            "restrictions": {
+              "section": null,
+              "class": "New Students Only",
+              "raw": [
+                "Section: None",
+                "Class:",
+                "New Students Only"
+              ]
+            },
+            "class_notes": [
+              "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+              "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+              "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+              "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+              "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+              "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+              "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+              "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+              "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+            ],
+            "requisites": [
+              {
+                "course": "Mathematics 3A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Mathematics 31AL",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Life Sciences 30A",
+                "min_grade": "D-",
+                "is_prereq": true,
+                "is_coreq": true,
+                "type": "Enforced"
+              },
+              {
+                "course": "Math Diagnostic Test",
+                "min_grade": ">=80% (48/60)",
+                "is_prereq": true,
+                "is_coreq": false,
+                "type": "Warning"
+              }
+            ],
+            "grade_type": "Non-Graded"
+          }
+        ],
+        "final_exam": {
+          "date": "December 6, 2026",
+          "day": "Sunday",
+          "time": "11:30am-2:30pm",
+          "location": "Check back on 11/23/2026 (Monday of 9th week) for final exam location"
+        },
+        "restrictions": [
+          "Class: New Students Only"
+        ],
+        "class_notes": [
+          "Any student attempting to save or sell a spot for another student is violating Student Conduct Code 102.23d and may be referred to the Office of the Dean of Students.",
+          "Seats are held for entering students who enroll through New Student Orientation sessions beginning July 2, 2026. New student restrictions will be lifted on September 15, 2026 at 8 a.m.",
+          "Enrollment is limited to Anthropology (BS); Atmospheric and Oceanic Sciences; Atmospheric and Oceanic Sciences/Mathematics; Biochemistry; Biology; Climate Science; Cognitive Science; Computational Biology; Earth and Environmental Science;",
+          "Ecology, Behavior, and Evolution; Environmental Science; Geology; Human Biology and Society; Marine Biology; Microbiology, Immunology, and Molecular Genetics; Molecular, Cell, and Developmental Biology; Neuroscience; Nursing;",
+          "Physiological Science; Psychobiology; Public Health majors and pre-majors on the priority, first, and second enrollment passes.",
+          "Any student may enroll beginning September 15, 2026 at 8 a.m., space permitting.",
+          "PTE numbers are NOT available; do not contact the instructor for a PTE number.",
+          "Students MUST attend the lecture in which they are enrolled; random ID checking is held throughout the term.",
+          "There will be two MANDATORY midterm examinations from 6 to 7:50 p.m. on Wednesday, October 28 and Thursday, November 12, 2026."
+        ],
+        "requisites": [
+          {
+            "course": "Mathematics 3A",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Mathematics 31A",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Mathematics 31AL",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Life Sciences 30A",
+            "min_grade": "D-",
+            "is_prereq": true,
+            "is_coreq": true,
+            "type": "Info"
+          },
+          {
+            "course": "Math Diagnostic Test",
+            "min_grade": ">=80% (48/60)",
+            "is_prereq": true,
+            "is_coreq": false,
+            "type": "Warning"
+          }
+        ],
+        "grading": "Letter Grade or Passed/ Not Passed",
+        "impacted": "No",
+        "level": "Lower Division",
+        "course_description": "Lecture, three hours; discussion, one hour. Preparation: high school chemistry or equivalent background and three and one half years of high school mathematics. Requisite: completion of Chemistry Diagnostic Test. Enforced corequisite: Life Sciences 30A or Mathematics 3A or 31A or score of 48 or better on Mathematics Diagnostic Test. Not open to students with credit for course 20A. Introduction to physical and general chemistry principles; atomic structure based on quantum mechanics; atomic properties; trends in periodic table; chemical bonding (Lewis structures, VSEPR theory, hybridization, and molecular orbital theory); coordination compounds; properties of inorganic and organic acids, bases, buffers. P/NP or letter grading.",
+        "ge_categories": [
+          "Foundations of Scientific Inquiry—Physical Sciences"
+        ],
+        "ge_lab_demo": false,
+        "writing_ii": false,
+        "diversity": false,
+        "department": "Chemistry and Biochemistry",
+        "department_url": "http://www.chemistry.ucla.edu",
+        "textbooks_url": "https://shib.asucla.ucla.edu/CourseRedirect/CoursesRed.html?catids=26F142042220",
+        "library_reserve_url": "https://search.library.ucla.edu/discovery/search?tab=CourseReserves&search_scope=CourseReserves&vid=01UCS_LAL:UCLA&lang=en&mode=advanced",
+        "materials_fee": "0.00",
+        "effective_discussion_restrictions": {
+          "distinct_restrictions": [],
+          "has_restricted_discussions": false,
+          "all_discussions_restricted": false,
+          "all_open_discussions_restricted": false,
+          "open_discussions_restrictions": []
+        }
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-import { Course, DayOfWeek, MeetingSession, ParseResult, TimeSlot } from '../types';
+import type { Course, DayOfWeek, MeetingSession, ParseResult, TimeSlot } from '../types';
 
 /**
  * Converts minutes from midnight (0..1440) to standard 12-hour string (e.g., "9:00 AM", "1:30 PM")

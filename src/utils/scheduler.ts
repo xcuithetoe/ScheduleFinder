@@ -1,10 +1,12 @@
-﻿import {
+import {
+  DAY_NAMES,
+  ORDERED_DAYS,
+} from '../types';
+import type {
   CandidateSchedule,
   Course,
-  DAY_NAMES,
   DayOfWeek,
   DaySchedule,
-  ORDERED_DAYS,
   ScheduleMetrics,
   ScheduledMeeting,
   SolverDiagnostics,

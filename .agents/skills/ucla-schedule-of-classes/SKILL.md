@@ -33,19 +33,43 @@ https://sa.ucla.edu/ro/public/soc/Results?SubjectAreaName={SubjectName}&t={TermC
 ## 2. Local Cache Check & Storage
 
 Before scraping UCLA SOC web pages:
-1. **Check Cache**: Check if `cached_courses.json` exists in the workspace root directory and contains data for the target course(s) (keyed by `course_code`, e.g., `"CLASSIC0010"`, `"LING0001"`). If pre-existing data is found, return/use it directly without navigating to the website.
-2. **Scrape & Save**: If data for the requested course is missing from `cached_courses.json`, proceed with the Scraping Procedure below. Once retrieved, immediately append/update `cached_courses.json` with the newly fetched course schedule object so it is preserved for future requests.
+1. **Check Cache**: Check if `course_info.json` or `cached_courses.json` exists in the workspace root directory and contains data for the target course(s) (keyed by `course_code`, e.g., `"CLASSIC0010"`, `"LING0001"`). If pre-existing data is found, return/use it directly without navigating to the website.
+2. **Scrape & Save**: If data for the requested course is missing, proceed with the Scraping Procedure below. Once retrieved, immediately append/update the output file with the newly fetched course schedule object so it is preserved for future requests.
+
+### 2.1 Anti-Rate-Limiting Architecture
+The UCLA Registrar SOC is guarded by an F5 BIG-IP Web Application Firewall (WAF) that issues HTTP 529 (`/Error/TooManyRequests`) and IP cooldowns when burst traffic exceeds threshold limits. To guarantee uninterrupted scraping:
+- **Rate Limiting**: Always enforce a global thread-safe token bucket rate limiter capped at **3.5 requests/second** across all worker threads.
+- **Session Handshake**: Pre-warm requests with `init_session()` to acquire an `ASP.NET_SessionId` and F5 cookies before dispatching parallel tasks.
+- **Indicator Badge Optimization**: Inspect section rows for warning/info indicator icons (`icon-warning-sign`, `icon-info-sign`, `icon-lock`). Only invoke `ClassDetailTooltip` when an indicator icon is present, reducing HTTP queries by ~70%.
+- **Adaptive Backoff**: Implement exponential backoff with jitter on HTTP 429, 503, or 529 responses.
+
+### 2.2 Batch Catalog Scanning via Pre-Indexed SOC Models
+When scanning large department course lists:
+- Rather than sequentially polling SOC for every course code (which takes 1–2 requests per course even if not offered), load or generate a subject-level model map (`all_soc_models_26F.json`).
+- Verify whether the course code exists in the pre-indexed model map in memory. Unoffered courses are skipped in $O(1)$ time without making external HTTP requests.
 
 ---
 
-## 3. Scraping Procedure with Chrome DevTools MCP
+## 3. Scraping Procedures
 
-The UCLA SOC web application renders inside a Shadow DOM Web Component (`<ucla-sa-soc-app>`). To interact with the page and extract full section details:
+### Option A: Fast Direct AJAX Scraper (Recommended)
+A robust Python pipeline is available at [`scripts/scrape_courses.py`](file:///c:/Users/boomer/Desktop/schedule_cleaner/scripts/scrape_courses.py) and [`scripts/iterative_scraper.py`](file:///c:/Users/boomer/Desktop/schedule_cleaner/scripts/iterative_scraper.py) which bypasses browser overhead and directly queries UCLA Registrar AJAX endpoints (`GetCourseSummary`, `ClassDetail`, `ClassDetailTooltip`). It extracts full course metadata, requisites, GE categories, final exams, warning/info indicators, discussion section rosters, and enrollment restrictions (e.g., "New Transfers Only").
 
-### Step 1: Navigate to the Target SOC Page
+See the full workflow in [`.agents/workflows/course-data-scraping.md`](file:///c:/Users/boomer/Desktop/schedule_cleaner/.agents/workflows/course-data-scraping.md).
+
+```bash
+# Example: Scrape courses directly into course_info.json
+python scripts/scrape_courses.py "Physics 1A" "ARCH&UD 30" -o course_info.json
+```
+
+### Option B: Scraping Procedure with Chrome DevTools MCP (Browser DOM Fallback)
+
+The UCLA SOC web application renders inside a Shadow DOM Web Component (`<ucla-sa-soc-app>`). To interact with the page via browser:
+
+#### Step 1: Navigate to the Target SOC Page
 Use `navigate_page` with the appropriate URL.
 
-### Step 2: Extract Data
+#### Step 2: Extract Data
 Run the extraction script in [scripts/extract_course_sections.js](./scripts/extract_course_sections.js) via `evaluate_script`. This script automatically expands the course and all discussion sections, parses the data, and returns a strict JSON object.
 
 ---
