@@ -133,7 +133,9 @@ SUBJECT_MAP = {
     'Mathematics': 'MATH',
     'Chemistry': 'CHEM',
     'Computer Science': 'COM SCI',
-    'Economics': 'ECON'
+    'Economics': 'ECON',
+    'GJSTDS': 'GJ STDS',
+    'MSCIND': 'MSC IND'
 }
 
 _subject_models_cache = {}
@@ -173,6 +175,14 @@ def parse_course_input(input_str: str):
         cat = m2.group(2).strip()
         title = m2.group(3).strip() if m2.group(3) else f"{cat} - {subj}"
         return subj, cat, title
+
+    # 3. Check normalized SOC code (e.g. 'ARCHUD0030', 'MGMT0108', 'PHYSICS0001A')
+    m3 = re.match(r'^([A-Za-z\s&]+?)(\d{3,4}[A-Za-z]*)$', clean)
+    if m3:
+        subj = m3.group(1).strip()
+        cat = m3.group(2).strip()
+        friendly_cat = re.sub(r'^0+', '', cat)
+        return subj, friendly_cat, f"{cat} - {subj}"
 
     # Fallback split
     parts = clean.split()
@@ -824,6 +834,220 @@ def scrape_courses_pipeline(course_inputs, term=DEFAULT_TERM, output_file=DEFAUL
     print(f"\n[+] SUCCESS! Finished scraping. Total courses saved to {output_file}: {len(existing_data)}")
     return existing_data
 
+def update_course_enrollment(course_key, existing_course_obj, term=DEFAULT_TERM, subj=None, cat=None):
+    """
+    Updates ONLY the enrollment, waitlist, and status fields of lectures and discussions
+    for a course already in course_info.json by calling only GetCourseSummary.
+    All other metadata (descriptions, GE categories, exams, requisites, tooltips)
+    remains completely untouched.
+    """
+    if not subj or not cat:
+        subj, cat, _ = parse_course_input(course_key)
+        if not (subj and cat):
+            m = re.match(r'^([A-Za-z\s&]+?)(\d{3,4}[A-Za-z]*)$', course_key)
+            if m:
+                subj, cat = m.group(1).strip(), m.group(2).strip()
+    
+    if not subj or not cat:
+        return False
+
+    subj_code = SUBJECT_MAP.get(subj, subj)
+    models = get_models_for_subject(term, subj_code)
+    norm_cat = normalize_catalog_number(cat)
+    clean_subj = subj.replace(" ", "").replace("&", "").upper()
+
+    model = None
+    clean_cat_digits = re.sub(r'^[M]?', '', cat).strip()
+    for k, m in models.items():
+        if norm_cat in k or (clean_cat_digits and clean_cat_digits in k):
+            model = m
+            break
+
+    if not model:
+        cat_pad = cat.ljust(8)
+        path = f"{clean_subj}{norm_cat}"
+        token = base64.b64encode(f"{cat_pad}{path}".encode()).decode()
+        model = {
+            "Term": term,
+            "SubjectAreaCode": subj_code,
+            "CatalogNumber": cat_pad,
+            "IsRoot": True,
+            "SessionGroup": "%",
+            "ClassNumber": "%",
+            "SequenceNumber": None,
+            "Path": path,
+            "MultiListedClassFlag": "n",
+            "Token": token
+        }
+
+    # 1. Fetch lecture summary
+    lec_html = fetch_summary_with_model(model)
+    if not lec_html:
+        return False
+
+    soup = BeautifulSoup(lec_html, "html.parser")
+    data_rows = soup.find_all("div", class_=lambda c: c and "data_row" in c and "primary-row" in c)
+    
+    # Map parsed rows by section_id and class_id
+    parsed_lecs_by_sec = {}
+    parsed_lecs_by_cid = {}
+    for r in data_rows:
+        row_info = parse_section_row(r)
+        sec_id = row_info.get("section_id")
+        cid = row_info.get("_class_id")
+        if sec_id:
+            parsed_lecs_by_sec[sec_id] = row_info
+        if cid:
+            parsed_lecs_by_cid[cid] = row_info
+
+    # Update existing lectures in-place
+    for existing_lec in existing_course_obj.get("lectures", []):
+        sec_id = existing_lec.get("section_id")
+        cid = existing_lec.get("class_id")
+        fresh = parsed_lecs_by_cid.get(cid) or parsed_lecs_by_sec.get(sec_id)
+        if fresh:
+            existing_lec["status"] = fresh["status"]
+            existing_lec["enrollment"] = fresh["enrollment"]
+            existing_lec["waitlist"] = fresh["waitlist"]
+
+        # 2. Update discussions if present
+        cno = existing_lec.get("class_no")
+        if cid and cno and existing_lec.get("discussions"):
+            disc_model = {
+                "Term": term,
+                "SubjectAreaCode": model["SubjectAreaCode"],
+                "CatalogNumber": model["CatalogNumber"],
+                "IsRoot": False,
+                "SessionGroup": None,
+                "ClassNumber": f" {cno.strip()}  ",
+                "SequenceNumber": "1",
+                "Path": f"{cid}_{model['Path']}",
+                "MultiListedClassFlag": "n",
+                "Token": base64.b64encode(f"{model['CatalogNumber']}{cid}_{model['Path']}".encode()).decode()
+            }
+            try:
+                disc_html = fetch_summary_with_model(disc_model)
+                disc_soup = BeautifulSoup(disc_html, "html.parser")
+                disc_rows = disc_soup.find_all("div", class_=lambda c: c and "data_row" in c and "primary-row" not in c)
+                
+                parsed_discs_by_sec = {}
+                parsed_discs_by_cid = {}
+                for dr in disc_rows:
+                    dr_info = parse_section_row(dr)
+                    d_sec = dr_info.get("section_id")
+                    d_cid = dr_info.get("_class_id")
+                    if d_sec:
+                        parsed_discs_by_sec[d_sec] = dr_info
+                    if d_cid:
+                        parsed_discs_by_cid[d_cid] = dr_info
+
+                for existing_disc in existing_lec.get("discussions", []):
+                    d_sec_id = existing_disc.get("section_id")
+                    d_cid = existing_disc.get("class_id")
+                    fresh_d = parsed_discs_by_cid.get(d_cid) or parsed_discs_by_sec.get(d_sec_id)
+                    if fresh_d:
+                        existing_disc["status"] = fresh_d["status"]
+                        existing_disc["enrollment"] = fresh_d["enrollment"]
+                        existing_disc["waitlist"] = fresh_d["waitlist"]
+
+                # 3. Recalculate effective discussion restrictions
+                discussions = existing_lec.get("discussions", [])
+                sec_restrs = [d["restrictions"]["section"] for d in discussions if d.get("restrictions") and d["restrictions"].get("section")]
+                distinct_sec_restrs = sorted(list(set(sec_restrs)))
+                
+                open_discs = [d for d in discussions if (d.get("enrollment") or {}).get("spots_left", 0) > 0]
+                open_sec_restrs = [d["restrictions"]["section"] for d in open_discs if d.get("restrictions") and d["restrictions"].get("section")]
+                distinct_open_restrs = sorted(list(set(open_sec_restrs)))
+
+                existing_lec["effective_discussion_restrictions"] = {
+                    "distinct_restrictions": distinct_sec_restrs,
+                    "has_restricted_discussions": len(distinct_sec_restrs) > 0,
+                    "all_discussions_restricted": len(sec_restrs) == len(discussions) and len(discussions) > 0,
+                    "all_open_discussions_restricted": len(open_sec_restrs) == len(open_discs) and len(open_discs) > 0,
+                    "open_discussions_restrictions": distinct_open_restrs
+                }
+            except Exception as e:
+                print(f"  Error updating discussions for {course_key}: {e}")
+
+    return True
+
+def update_enrollment_pipeline(course_inputs=None, term=DEFAULT_TERM, output_file=DEFAULT_OUTPUT, max_workers=6):
+    """
+    Refreshes enrollment, spots left, and waitlists for courses in output_file without re-scraping
+    heavy catalog details, GE categories, exams, or tooltips.
+    """
+    if not os.path.exists(output_file):
+        print(f"[!] Error: Output file {output_file} does not exist. Nothing to update.")
+        return {}
+
+    with open(output_file, 'r', encoding='utf-8') as f:
+        existing_data = json.load(f)
+
+    courses_to_update = []
+    if course_inputs:
+        for raw in course_inputs:
+            subj, cat, _ = parse_course_input(raw)
+            matched_key = None
+            norm_c = normalize_catalog_number(cat) if cat else ""
+            clean_s = re.sub(r'[^A-Za-z0-9]', '', subj.upper()) if subj else ""
+            for k in existing_data:
+                clean_k = re.sub(r'[^A-Za-z0-9]', '', k.upper())
+                if raw == k or (clean_s and clean_s in clean_k and norm_c and norm_c in clean_k):
+                    matched_key = k
+                    break
+            if matched_key:
+                courses_to_update.append((matched_key, subj, cat, raw))
+            else:
+                courses_to_update.append((raw, subj, cat, raw))
+    else:
+        for k in existing_data:
+            courses_to_update.append((k, None, None, k))
+
+    total = len(courses_to_update)
+    print(f"[*] Fast Enrollment Update for {total} courses in {output_file} (Term: {term})...")
+    print(f"[*] Skipping ClassDetail & Tooltips; updating status, seats, and discussion restrictions only.")
+
+    completed = 0
+    updated_count = 0
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_course = {}
+        for c_key, subj, cat, raw in courses_to_update:
+            if c_key in existing_data:
+                future = executor.submit(update_course_enrollment, c_key, existing_data[c_key], term, subj, cat)
+                future_to_course[future] = (c_key, raw)
+            else:
+                print(f"[!] Course '{raw}' not found in {output_file}. (Use full scrape to add new courses)")
+
+        for future in as_completed(future_to_course):
+            c_key, raw = future_to_course[future]
+            completed += 1
+            try:
+                success = future.result()
+                if success:
+                    updated_count += 1
+                    c_data = existing_data[c_key]
+                    lec0 = c_data["lectures"][0] if c_data.get("lectures") else {}
+                    enr = lec0.get("enrollment") or {}
+                    spots = enr.get("spots_left", "N/A")
+                    st = lec0.get("status", "Unknown")
+                    eff = lec0.get("effective_discussion_restrictions", {})
+                    flag = " (⚠️ all open discs restricted)" if eff.get("all_open_discussions_restricted") else ""
+                    print(f"[{completed}/{total}] Updated {c_key}: {st} ({spots} spots left){flag}")
+                else:
+                    print(f"[{completed}/{total}] [!] Failed to update {c_key}")
+            except Exception as e:
+                print(f"[{completed}/{total}] [X] Exception updating {c_key}: {e}")
+
+    # Atomic write to protect file integrity
+    temp_file = output_file + ".tmp"
+    with open(temp_file, 'w', encoding='utf-8') as f:
+        json.dump(existing_data, f, indent=2, ensure_ascii=False)
+    os.replace(temp_file, output_file)
+
+    print(f"\n[+] SUCCESS! Finished updating enrollment data for {updated_count}/{total} courses in {output_file}.")
+    return existing_data
+
 def main():
     parser = argparse.ArgumentParser(description="End-to-End UCLA Schedule of Classes (SOC) Course Scraper")
     parser.add_argument('courses', nargs='*', help='Course titles or codes (e.g. "Physics 1A", "Arch&UD 30")')
@@ -831,6 +1055,8 @@ def main():
     parser.add_argument('-o', '--output', default=DEFAULT_OUTPUT, help=f'Output JSON file (default: {DEFAULT_OUTPUT})')
     parser.add_argument('-t', '--term', default=DEFAULT_TERM, help=f'Term code (e.g. 26F, 26W; default: {DEFAULT_TERM})')
     parser.add_argument('-w', '--workers', type=int, default=6, help='Number of concurrent worker threads (default: 6)')
+    parser.add_argument('--update-enrollment', '--enrollment-only', action='store_true',
+                        help='Fast refresh mode: updates ONLY enrollment/waitlist/status for existing courses, skipping heavy metadata & tooltips')
     args = parser.parse_args()
 
     course_list = []
@@ -848,12 +1074,15 @@ def main():
     if args.courses:
         course_list.extend(args.courses)
 
-    if not course_list:
-        print("No courses specified. Please provide course titles via arguments or an input file.")
-        print("Example: python scripts/scrape_courses.py \"Physics 1A\" \"ARCH&UD 30\"")
-        sys.exit(1)
+    if args.update_enrollment:
+        update_enrollment_pipeline(course_list if course_list else None, term=args.term, output_file=args.output, max_workers=args.workers)
+    else:
+        if not course_list:
+            print("No courses specified. Please provide course titles via arguments or an input file.")
+            print("Example: python scripts/scrape_courses.py \"Physics 1A\" \"ARCH&UD 30\"")
+            sys.exit(1)
 
-    scrape_courses_pipeline(course_list, term=args.term, output_file=args.output, max_workers=args.workers)
+        scrape_courses_pipeline(course_list, term=args.term, output_file=args.output, max_workers=args.workers)
 
 if __name__ == '__main__':
     main()

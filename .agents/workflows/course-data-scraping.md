@@ -114,21 +114,33 @@ python scripts/scrape_courses.py --input courses.txt --output course_info.json -
 
 # Adjust concurrent worker threads (default: 6)
 python scripts/scrape_courses.py -i courses.txt -w 8
+
+# Fast Enrollment Update Mode (Enrollment Period Refresh):
+# Updates ONLY enrollment, waitlist, and seat counts for lectures & discussions in-place,
+# recomputes discussion restriction flags, and skips all heavy metadata/tooltips.
+python scripts/scrape_courses.py --update-enrollment "Physics 1A" "ARCH&UD 30"
+
+# Refresh enrollment for ALL courses currently stored in course_info.json:
+python scripts/scrape_courses.py --update-enrollment
 ```
 
 ### Python API Usage:
 ```python
-from scripts.scrape_courses import scrape_courses_pipeline
+from scripts.scrape_courses import scrape_courses_pipeline, update_enrollment_pipeline
 
+# Full Scrape (New Courses)
 courses = [
     "Physics 1A",
     "Physics 1AH",
-    "Physics 1B",
-    "ARCH&UD 30 - Introduction to Architectural Studies",
-    "ART 31A - Rise of Modernism in Global Context"
+    "ARCH&UD 30 - Introduction to Architectural Studies"
 ]
+data = scrape_courses_pipeline(courses, term="26F", output_file="course_info.json", max_workers=6)
 
-data = scrape_courses_pipeline(courses, term="26F", output_file="course_info.json")
+# Fast Enrollment Refresh (Only changes status/seats/waitlist & re-evaluates restriction roll-ups)
+update_enrollment_pipeline(courses, term="26F", output_file="course_info.json", max_workers=6)
+
+# Or refresh ALL existing courses in the file:
+update_enrollment_pipeline(term="26F", output_file="course_info.json", max_workers=8)
 ```
 
 ---

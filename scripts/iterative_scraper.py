@@ -25,6 +25,7 @@ from scripts.scrape_courses import (
     fetch_full_class_detail,
     fetch_tooltip_by_params,
     parse_section_row,
+    get_models_for_subject,
     DEFAULT_TERM
 )
 
@@ -52,13 +53,14 @@ def load_existing_data(file_path=OUTPUT_FILE):
     return {}
 
 def save_data(data, file_path=OUTPUT_FILE):
-    # Save atomically to avoid corruption
+    # Save atomically to avoid corruption and ensure alphabetical ordering by course code
+    sorted_data = dict(sorted(data.items(), key=lambda item: item[0]))
     temp_file = file_path + '.tmp'
     with open(temp_file, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(sorted_data, f, indent=2, ensure_ascii=False)
     os.replace(temp_file, file_path)
 
-def load_soc_models():
+def load_soc_models(courses=None, term=DEFAULT_TERM):
     if os.path.exists(MODELS_FILE):
         with open(MODELS_FILE, 'r', encoding='utf-8') as f:
             all_subj_models = json.load(f)
@@ -74,6 +76,28 @@ def load_soc_models():
                     base_k = k[:-3]
                     if base_k not in model_by_key:
                         model_by_key[base_k] = m
+
+    # Pre-fetch models for any subjects in courses not already present
+    if courses:
+        subjects = set()
+        for c in courses:
+            m = re.match(r'^([A-Za-z&]+)', c)
+            if m:
+                subjects.add(m.group(1))
+
+        for subj in sorted(subjects):
+            matching = [k for k in model_by_key if k.startswith(subj) and (len(k) == len(subj) or not k[len(subj)].isalpha())]
+            if not matching:
+                print(f"[*] Pre-fetching SOC models for subject: {subj}...")
+                subj_models = get_models_for_subject(term, subj)
+                for k, m in subj_models.items():
+                    if m.get('IsRoot', True):
+                        model_by_key[k] = m
+                        if k.endswith('001'):
+                            base_k = k[:-3]
+                            if base_k not in model_by_key:
+                                model_by_key[base_k] = m
+
     return model_by_key
 
 def scrape_course_with_model(model, course_code, term=DEFAULT_TERM):
@@ -194,7 +218,7 @@ def scrape_course_with_model(model, course_code, term=DEFAULT_TERM):
 def run_iterative_scraping(input_file=COURSES_FILE, output_file=OUTPUT_FILE, start_index=0, max_scrape=None):
     courses = load_courses(input_file)
     existing_data = load_existing_data(output_file)
-    soc_models = load_soc_models()
+    soc_models = load_soc_models(courses, DEFAULT_TERM)
 
     total_courses = len(courses)
     print(f"[*] Loaded {total_courses} courses from {input_file}")
