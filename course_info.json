@@ -132156,9 +132156,9 @@
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 194,
+          "enrolled": 193,
           "capacity": 215,
-          "spots_left": 21
+          "spots_left": 22
         },
         "waitlist": null,
         "meetings": [
@@ -132484,9 +132484,13 @@
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 34,
+              "capacity": 35,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -385096,7 +385100,7 @@
             "instructor": "TA",
             "status": "Waitlist",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -385126,7 +385130,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385153,7 +385157,7 @@
             "instructor": "TA",
             "status": "Waitlist",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -385183,7 +385187,7 @@
             "instructor": "TA",
             "status": "Waitlist",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -385256,7 +385260,7 @@
         "instructor": "Gillespie, R.T.",
         "status": "Closed",
         "units": "5.0",
-        "enrollment": null,
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -385319,7 +385323,7 @@
         "instructor": "Balkwill, S.",
         "status": "Closed",
         "units": "5.0",
-        "enrollment": null,
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -385338,7 +385342,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385365,7 +385369,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385392,7 +385396,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385419,7 +385423,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385446,7 +385450,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385473,7 +385477,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385500,7 +385504,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385527,7 +385531,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385554,7 +385558,7 @@
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -398510,7 +398514,7 @@
         "units": "4.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 1,
+          "taken": 0,
           "capacity": 30
         },
         "meetings": [
@@ -406027,13 +406031,9 @@
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Zanontian, L.A.",
-        "status": "Open",
+        "status": "Closed",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 159,
-          "capacity": 160,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {

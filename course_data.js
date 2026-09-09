@@ -1,5 +1,5 @@
 // UCLA Course Information Dataset
-window.COURSE_INFO_TIMESTAMP = 1788989229437; // 2026-09-09T21:27:09.437796+00:00
+window.COURSE_INFO_TIMESTAMP = 1788996122337; // 2026-09-09T23:22:02.337980+00:00
 window.COURSE_INFO = {
   "AEROST0001A": {
     "course": {
@@ -132158,9 +132158,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 194,
+          "enrolled": 193,
           "capacity": 215,
-          "spots_left": 21
+          "spots_left": 22
         },
         "waitlist": null,
         "meetings": [
@@ -132486,9 +132486,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 34,
+              "capacity": 35,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -385098,7 +385102,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Waitlist",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -385128,7 +385132,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385155,7 +385159,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Waitlist",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -385185,7 +385189,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Waitlist",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -385258,7 +385262,7 @@ window.COURSE_INFO = {
         "instructor": "Gillespie, R.T.",
         "status": "Closed",
         "units": "5.0",
-        "enrollment": null,
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -385321,7 +385325,7 @@ window.COURSE_INFO = {
         "instructor": "Balkwill, S.",
         "status": "Closed",
         "units": "5.0",
-        "enrollment": null,
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -385340,7 +385344,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385367,7 +385371,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385394,7 +385398,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385421,7 +385425,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385448,7 +385452,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385475,7 +385479,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385502,7 +385506,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385529,7 +385533,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -385556,7 +385560,7 @@ window.COURSE_INFO = {
             "instructor": "TA",
             "status": "Closed",
             "units": "0.0",
-            "enrollment": null,
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -398512,7 +398516,7 @@ window.COURSE_INFO = {
         "units": "4.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 1,
+          "taken": 0,
           "capacity": 30
         },
         "meetings": [
@@ -406029,13 +406033,9 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Zanontian, L.A.",
-        "status": "Open",
+        "status": "Closed",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 159,
-          "capacity": 160,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
