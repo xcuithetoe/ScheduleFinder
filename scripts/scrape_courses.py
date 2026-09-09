@@ -105,17 +105,20 @@ def http_request_with_retry(req, max_retries=5, timeout=15):
                 return resp.read().decode("utf-8", errors="replace")
         except urllib.error.HTTPError as e:
             if e.code in [529, 429, 503] or "/Error/TooManyRequests" in getattr(e, "url", ""):
-                wait_time = min(300, 30 * (2 ** attempt))
-                print(f"  [⚠️ Rate limit detected (HTTP {e.code})] Self-throttling: pausing {wait_time}s before retry ({attempt+1}/{max_retries})...")
+                if attempt >= 2:
+                    print(f"  [⚠️ Persistent HTTP {e.code} after {attempt+1} attempts] Skipping unqueryable section/course.")
+                    return None
+                wait_time = 15 * (attempt + 1)
+                print(f"  [⚠️ Rate limit/529 detected (HTTP {e.code})] Pausing {wait_time}s before retry ({attempt+1}/2)...")
                 time.sleep(wait_time)
                 init_session(force=True)
             else:
                 if attempt == max_retries - 1:
-                    raise e
+                    return None
                 time.sleep(1.5)
         except Exception as e:
             if attempt == max_retries - 1:
-                raise e
+                return None
             time.sleep(1.5)
     return None
 
