@@ -1,5 +1,5 @@
 // UCLA Course Information Dataset
-window.COURSE_INFO_TIMESTAMP = 1788982100432; // 2026-09-09T19:28:20.432276+00:00
+window.COURSE_INFO_TIMESTAMP = 1788989229437; // 2026-09-09T21:27:09.437796+00:00
 window.COURSE_INFO = {
   "AEROST0001A": {
     "course": {
@@ -3080,9 +3080,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 104,
+          "enrolled": 103,
           "capacity": 115,
-          "spots_left": 11
+          "spots_left": 12
         },
         "waitlist": null,
         "meetings": [
@@ -3208,9 +3208,13 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "Antell-Hoye, L.J.",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 15,
+              "capacity": 16,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -7598,13 +7602,9 @@ window.COURSE_INFO = {
         "indicator": "info",
         "indicator_label": "Class Requisite Information",
         "instructor": "Burke, A.A.",
-        "status": "Open",
+        "status": "Waitlist",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 65,
-          "capacity": 66,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": {
           "taken": 10,
           "capacity": 60
@@ -7714,13 +7714,9 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "Stewart-Bernard, M",
-            "status": "Open",
+            "status": "Waitlist",
             "units": "0.0",
-            "enrollment": {
-              "enrolled": 10,
-              "capacity": 11,
-              "spots_left": 1
-            },
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 10
@@ -15147,9 +15143,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 135,
+          "enrolled": 134,
           "capacity": 180,
-          "spots_left": 45
+          "spots_left": 46
         },
         "waitlist": {
           "taken": 0,
@@ -15230,9 +15226,13 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "TA",
-            "status": "Waitlist",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 29,
+              "capacity": 30,
+              "spots_left": 1
+            },
             "waitlist": {
               "taken": 0,
               "capacity": 2
@@ -18017,9 +18017,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "2.0",
         "enrollment": {
-          "enrolled": 33,
+          "enrolled": 34,
           "capacity": 55,
-          "spots_left": 22
+          "spots_left": 21
         },
         "waitlist": {
           "taken": 0,
@@ -18272,9 +18272,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "2.0",
         "enrollment": {
-          "enrolled": 1,
+          "enrolled": 2,
           "capacity": 10,
-          "spots_left": 9
+          "spots_left": 8
         },
         "waitlist": null,
         "meetings": [
@@ -27564,13 +27564,9 @@ window.COURSE_INFO = {
         "indicator": "info",
         "indicator_label": "Class Requisite Information",
         "instructor": "The Staff",
-        "status": "Open",
+        "status": "Waitlist",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 15,
-          "capacity": 16,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": {
           "taken": 0,
           "capacity": 5
@@ -28151,9 +28147,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 200,
+          "enrolled": 201,
           "capacity": 220,
-          "spots_left": 20
+          "spots_left": 19
         },
         "waitlist": null,
         "meetings": [
@@ -28212,9 +28208,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 16,
+              "enrolled": 17,
               "capacity": 20,
-              "spots_left": 4
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -44565,9 +44561,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 162,
+          "enrolled": 161,
           "capacity": 171,
-          "spots_left": 9
+          "spots_left": 10
         },
         "waitlist": null,
         "meetings": [
@@ -44626,9 +44622,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 18,
+              "enrolled": 17,
               "capacity": 19,
-              "spots_left": 1
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -51580,9 +51576,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 127,
+          "enrolled": 126,
           "capacity": 165,
-          "spots_left": 38
+          "spots_left": 39
         },
         "waitlist": null,
         "meetings": [
@@ -51603,9 +51599,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 27,
+              "enrolled": 26,
               "capacity": 29,
-              "spots_left": 2
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -60620,9 +60616,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 25,
+          "enrolled": 26,
           "capacity": 30,
-          "spots_left": 5
+          "spots_left": 4
         },
         "waitlist": null,
         "meetings": [
@@ -60643,9 +60639,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 25,
+              "enrolled": 26,
               "capacity": 30,
-              "spots_left": 5
+              "spots_left": 4
             },
             "waitlist": null,
             "meetings": [
@@ -67766,9 +67762,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Fluitt, A.H.\nTA\nClark, I.E.",
-        "status": "Closed",
+        "status": "Open",
         "units": "4.0",
-        "enrollment": {},
+        "enrollment": {
+          "enrolled": 89,
+          "capacity": 90,
+          "spots_left": 1
+        },
         "waitlist": null,
         "meetings": [
           {
@@ -73864,9 +73864,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 23,
+          "enrolled": 24,
           "capacity": 25,
-          "spots_left": 2
+          "spots_left": 1
         },
         "waitlist": null,
         "meetings": [
@@ -74893,9 +74893,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 287,
+          "enrolled": 293,
           "capacity": 315,
-          "spots_left": 28
+          "spots_left": 22
         },
         "waitlist": null,
         "meetings": [
@@ -74916,9 +74916,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 48,
+              "enrolled": 49,
               "capacity": 53,
-              "spots_left": 5
+              "spots_left": 4
             },
             "waitlist": null,
             "meetings": [
@@ -75078,9 +75078,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 47,
+              "enrolled": 48,
               "capacity": 52,
-              "spots_left": 5
+              "spots_left": 4
             },
             "waitlist": null,
             "meetings": [
@@ -75159,9 +75159,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 48,
+              "enrolled": 49,
               "capacity": 52,
-              "spots_left": 4
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -75240,9 +75240,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 48,
+              "enrolled": 49,
               "capacity": 53,
-              "spots_left": 5
+              "spots_left": 4
             },
             "waitlist": null,
             "meetings": [
@@ -75321,9 +75321,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 47,
+              "enrolled": 49,
               "capacity": 52,
-              "spots_left": 5
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -75483,9 +75483,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 284,
+          "enrolled": 288,
           "capacity": 314,
-          "spots_left": 30
+          "spots_left": 26
         },
         "waitlist": null,
         "meetings": [
@@ -75587,9 +75587,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 49,
+              "enrolled": 50,
               "capacity": 53,
-              "spots_left": 4
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -75749,9 +75749,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 49,
+              "enrolled": 50,
               "capacity": 52,
-              "spots_left": 3
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -75830,9 +75830,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 46,
+              "enrolled": 47,
               "capacity": 52,
-              "spots_left": 6
+              "spots_left": 5
             },
             "waitlist": null,
             "meetings": [
@@ -75911,9 +75911,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 47,
+              "enrolled": 48,
               "capacity": 52,
-              "spots_left": 5
+              "spots_left": 4
             },
             "waitlist": null,
             "meetings": [
@@ -89890,9 +89890,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 23,
+          "enrolled": 24,
           "capacity": 50,
-          "spots_left": 27
+          "spots_left": 26
         },
         "waitlist": null,
         "meetings": [
@@ -90448,9 +90448,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 13,
+          "enrolled": 14,
           "capacity": 49,
-          "spots_left": 36
+          "spots_left": 35
         },
         "waitlist": null,
         "meetings": [
@@ -90471,9 +90471,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 13,
+              "enrolled": 14,
               "capacity": 60,
-              "spots_left": 47
+              "spots_left": 46
             },
             "waitlist": null,
             "meetings": [
@@ -94200,7 +94200,7 @@ window.COURSE_INFO = {
         "units": "5.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 59,
+          "taken": 58,
           "capacity": 60
         },
         "meetings": [
@@ -94272,7 +94272,7 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "Smith, C.",
-            "status": "Waitlist",
+            "status": "Closed",
             "units": "0.0",
             "enrollment": {},
             "waitlist": {
@@ -94410,10 +94410,13 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "Rudin, N.",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 4,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -118180,9 +118183,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 52,
+          "enrolled": 54,
           "capacity": 120,
-          "spots_left": 68
+          "spots_left": 66
         },
         "waitlist": {
           "taken": 0,
@@ -118258,9 +118261,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 35,
+              "enrolled": 36,
               "capacity": 60,
-              "spots_left": 25
+              "spots_left": 24
             },
             "waitlist": null,
             "meetings": [
@@ -118311,9 +118314,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 17,
+              "enrolled": 18,
               "capacity": 60,
-              "spots_left": 43
+              "spots_left": 42
             },
             "waitlist": null,
             "meetings": [
@@ -128099,7 +128102,7 @@ window.COURSE_INFO = {
         "units": "4.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 2,
+          "taken": 3,
           "capacity": 5
         },
         "meetings": [
@@ -130226,10 +130229,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Kadambi, A.",
-        "status": "Closed",
+        "status": "Waitlist",
         "units": "4.0",
         "enrollment": {},
-        "waitlist": null,
+        "waitlist": {
+          "taken": 2,
+          "capacity": 30
+        },
         "meetings": [
           {
             "days": "TR",
@@ -130245,10 +130251,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 1,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -130296,10 +130305,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 1,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -130347,10 +130359,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -130398,10 +130413,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -130449,10 +130467,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -130500,10 +130521,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 5
+            },
             "meetings": [
               {
                 "days": "F",
@@ -133886,9 +133910,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 62,
+          "enrolled": 65,
           "capacity": 70,
-          "spots_left": 8
+          "spots_left": 5
         },
         "waitlist": null,
         "meetings": [
@@ -133909,9 +133933,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 33,
+              "enrolled": 34,
               "capacity": 35,
-              "spots_left": 2
+              "spots_left": 1
             },
             "waitlist": null,
             "meetings": [
@@ -134017,9 +134041,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 29,
+              "enrolled": 31,
               "capacity": 35,
-              "spots_left": 6
+              "spots_left": 4
             },
             "waitlist": null,
             "meetings": [
@@ -137610,9 +137634,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 324,
+          "enrolled": 325,
           "capacity": 355,
-          "spots_left": 31
+          "spots_left": 30
         },
         "waitlist": {
           "taken": 0,
@@ -138000,9 +138024,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 37,
+              "enrolled": 38,
               "capacity": 40,
-              "spots_left": 3
+              "spots_left": 2
             },
             "waitlist": {
               "taken": 0,
@@ -138102,10 +138126,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Osei Twumasi, O.I.",
-        "status": "Closed",
+        "status": "Waitlist",
         "units": "4.0",
         "enrollment": {},
-        "waitlist": null,
+        "waitlist": {
+          "taken": 10,
+          "capacity": 12
+        },
         "meetings": [
           {
             "days": "TR",
@@ -138213,11 +138240,15 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Osei Twumasi, O.I.",
-        "status": "Waitlist",
+        "status": "Open",
         "units": "1.0",
-        "enrollment": {},
+        "enrollment": {
+          "enrolled": 395,
+          "capacity": 396,
+          "spots_left": 1
+        },
         "waitlist": {
-          "taken": 3,
+          "taken": 2,
           "capacity": 12
         },
         "meetings": [
@@ -138721,9 +138752,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Waitlist",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 32,
+              "capacity": 33,
+              "spots_left": 1
+            },
             "waitlist": {
               "taken": 0,
               "capacity": 1
@@ -138803,10 +138838,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 1
+            },
             "meetings": [
               {
                 "days": "F",
@@ -141125,9 +141163,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 113,
+          "enrolled": 114,
           "capacity": 252,
-          "spots_left": 139
+          "spots_left": 138
         },
         "waitlist": {
           "taken": 0,
@@ -141202,9 +141240,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "1.0",
         "enrollment": {
-          "enrolled": 92,
+          "enrolled": 93,
           "capacity": 252,
-          "spots_left": 160
+          "spots_left": 159
         },
         "waitlist": {
           "taken": 1,
@@ -141444,9 +141482,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 14,
+              "enrolled": 15,
               "capacity": 42,
-              "spots_left": 28
+              "spots_left": 27
             },
             "waitlist": {
               "taken": 0,
@@ -149570,9 +149608,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 6,
+          "enrolled": 7,
           "capacity": 20,
-          "spots_left": 14
+          "spots_left": 13
         },
         "waitlist": null,
         "meetings": [
@@ -149638,9 +149676,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "1.0",
         "enrollment": {
-          "enrolled": 4,
+          "enrolled": 3,
           "capacity": 15,
-          "spots_left": 11
+          "spots_left": 12
         },
         "waitlist": null,
         "meetings": [
@@ -149701,9 +149739,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 6,
+          "enrolled": 7,
           "capacity": 20,
-          "spots_left": 14
+          "spots_left": 13
         },
         "waitlist": null,
         "meetings": [
@@ -157000,7 +157038,7 @@ window.COURSE_INFO = {
         "units": "5.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 7,
+          "taken": 6,
           "capacity": 10
         },
         "meetings": [
@@ -162887,13 +162925,9 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Allmendinger, B.",
-        "status": "Open",
+        "status": "Closed",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 34,
-          "capacity": 35,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -172420,9 +172454,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 171,
+          "enrolled": 170,
           "capacity": 176,
-          "spots_left": 5
+          "spots_left": 6
         },
         "waitlist": null,
         "meetings": [
@@ -172480,9 +172514,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 24,
+              "enrolled": 23,
               "capacity": 25,
-              "spots_left": 1
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -174763,9 +174797,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 7,
+          "enrolled": 8,
           "capacity": 16,
-          "spots_left": 9
+          "spots_left": 8
         },
         "waitlist": {
           "taken": 0,
@@ -175917,13 +175951,9 @@ window.COURSE_INFO = {
         "indicator": "info",
         "indicator_label": "Class Requisite Information",
         "instructor": "Ruskin, J.D.",
-        "status": "Open",
+        "status": "Closed",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 199,
-          "capacity": 200,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -176042,13 +176072,9 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "No instructors",
-            "status": "Open",
+            "status": "Waitlist",
             "units": "0.0",
-            "enrollment": {
-              "enrolled": 24,
-              "capacity": 25,
-              "spots_left": 1
-            },
+            "enrollment": {},
             "waitlist": {
               "taken": 0,
               "capacity": 5
@@ -187458,13 +187484,9 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Moore, A.D.\nTA",
-        "status": "Open",
+        "status": "Closed",
         "units": "4.0",
-        "enrollment": {
-          "enrolled": 99,
-          "capacity": 100,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -188578,7 +188600,7 @@ window.COURSE_INFO = {
         "units": "4.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 4,
+          "taken": 3,
           "capacity": 5
         },
         "meetings": [
@@ -198050,9 +198072,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 390,
+          "enrolled": 389,
           "capacity": 405,
-          "spots_left": 15
+          "spots_left": 16
         },
         "waitlist": null,
         "meetings": [
@@ -198538,9 +198560,13 @@ window.COURSE_INFO = {
             "indicator": "info",
             "indicator_label": "Class Requisite Information",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 19,
+              "capacity": 20,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -198869,7 +198895,7 @@ window.COURSE_INFO = {
           ],
           "has_restricted_discussions": true,
           "all_discussions_restricted": false,
-          "all_open_discussions_restricted": true,
+          "all_open_discussions_restricted": false,
           "open_discussions_restrictions": [
             "New Students Only"
           ]
@@ -207818,9 +207844,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 37,
+          "enrolled": 38,
           "capacity": 40,
-          "spots_left": 3
+          "spots_left": 2
         },
         "waitlist": {
           "taken": 0,
@@ -207886,9 +207912,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 37,
+          "enrolled": 38,
           "capacity": 40,
-          "spots_left": 3
+          "spots_left": 2
         },
         "waitlist": {
           "taken": 0,
@@ -209646,9 +209672,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 224,
+          "enrolled": 223,
           "capacity": 288,
-          "spots_left": 64
+          "spots_left": 65
         },
         "waitlist": null,
         "meetings": [
@@ -209669,9 +209695,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 18,
+              "enrolled": 17,
               "capacity": 19,
-              "spots_left": 1
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -216023,9 +216049,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 230,
+          "enrolled": 229,
           "capacity": 268,
-          "spots_left": 38
+          "spots_left": 39
         },
         "waitlist": null,
         "meetings": [
@@ -216080,9 +216106,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 26,
+              "enrolled": 25,
               "capacity": 30,
-              "spots_left": 4
+              "spots_left": 5
             },
             "waitlist": null,
             "meetings": [
@@ -217643,13 +217669,9 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Bristow, J.E.",
-        "status": "Open",
+        "status": "Closed",
         "units": "5.0",
-        "enrollment": {
-          "enrolled": 4,
-          "capacity": 5,
-          "spots_left": 1
-        },
+        "enrollment": {},
         "waitlist": null,
         "meetings": [
           {
@@ -224881,13 +224903,9 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Open",
+            "status": "Closed",
             "units": "0.0",
-            "enrollment": {
-              "enrolled": 23,
-              "capacity": 24,
-              "spots_left": 1
-            },
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -225225,9 +225243,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 23,
+              "enrolled": 22,
               "capacity": 24,
-              "spots_left": 1
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -232576,9 +232594,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "2.0",
         "enrollment": {
-          "enrolled": 27,
+          "enrolled": 28,
           "capacity": 50,
-          "spots_left": 23
+          "spots_left": 22
         },
         "waitlist": null,
         "meetings": [
@@ -245537,9 +245555,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 203,
+          "enrolled": 202,
           "capacity": 210,
-          "spots_left": 7
+          "spots_left": 8
         },
         "waitlist": null,
         "meetings": [
@@ -245557,9 +245575,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 34,
+              "capacity": 35,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -247189,9 +247211,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "3.0",
         "enrollment": {
-          "enrolled": 16,
+          "enrolled": 17,
           "capacity": 25,
-          "spots_left": 9
+          "spots_left": 8
         },
         "waitlist": null,
         "meetings": [
@@ -247212,9 +247234,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 16,
+              "enrolled": 17,
               "capacity": 25,
-              "spots_left": 9
+              "spots_left": 8
             },
             "waitlist": null,
             "meetings": [
@@ -295483,9 +295505,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "2.0-10.0 Variable",
         "enrollment": {
-          "enrolled": 1,
+          "enrolled": 2,
           "capacity": 5,
-          "spots_left": 4
+          "spots_left": 3
         },
         "waitlist": null,
         "meetings": [
@@ -296395,9 +296417,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "2.0-10.0 Variable",
         "enrollment": {
-          "enrolled": 1,
+          "enrolled": 2,
           "capacity": 5,
-          "spots_left": 4
+          "spots_left": 3
         },
         "waitlist": null,
         "meetings": [
@@ -300031,9 +300053,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 98,
+          "enrolled": 100,
           "capacity": 120,
-          "spots_left": 22
+          "spots_left": 20
         },
         "waitlist": null,
         "meetings": [
@@ -300090,9 +300112,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 34,
+              "enrolled": 36,
               "capacity": 60,
-              "spots_left": 26
+              "spots_left": 24
             },
             "waitlist": null,
             "meetings": [
@@ -304391,8 +304413,8 @@ window.COURSE_INFO = {
         "units": "4.0",
         "enrollment": {
           "enrolled": 20,
-          "capacity": 45,
-          "spots_left": 25
+          "capacity": 25,
+          "spots_left": 5
         },
         "waitlist": null,
         "meetings": [
@@ -305412,7 +305434,7 @@ window.COURSE_INFO = {
         "units": "4.0",
         "enrollment": {},
         "waitlist": {
-          "taken": 1,
+          "taken": 2,
           "capacity": 10
         },
         "meetings": [
@@ -305673,10 +305695,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Pierce, M.D.",
-        "status": "Closed",
+        "status": "Waitlist",
         "units": "4.0",
         "enrollment": {},
-        "waitlist": null,
+        "waitlist": {
+          "taken": 9,
+          "capacity": 10
+        },
         "meetings": [
           {
             "days": "W",
@@ -307875,9 +307900,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "2.0-4.0 Variable",
         "enrollment": {
-          "enrolled": 33,
+          "enrolled": 34,
           "capacity": 72,
-          "spots_left": 39
+          "spots_left": 38
         },
         "waitlist": {
           "taken": 0,
@@ -308878,9 +308903,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 16,
+          "enrolled": 15,
           "capacity": 20,
-          "spots_left": 4
+          "spots_left": 5
         },
         "waitlist": {
           "taken": 0,
@@ -352650,10 +352675,13 @@ window.COURSE_INFO = {
         "indicator": "info",
         "indicator_label": "Class Requisite Information",
         "instructor": "McHose, J.B.",
-        "status": "Closed",
+        "status": "Waitlist",
         "units": "4.0",
         "enrollment": {},
-        "waitlist": null,
+        "waitlist": {
+          "taken": 4,
+          "capacity": 5
+        },
         "meetings": [
           {
             "days": "TR",
@@ -356269,10 +356297,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Frye, M.A.",
-        "status": "Closed",
+        "status": "Waitlist",
         "units": "5.0",
         "enrollment": {},
-        "waitlist": null,
+        "waitlist": {
+          "taken": 1,
+          "capacity": 8
+        },
         "meetings": [
           {
             "days": "TR",
@@ -356288,10 +356319,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Bignell, A.",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 0,
+              "capacity": 4
+            },
             "meetings": [
               {
                 "days": "W",
@@ -356374,10 +356408,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Bignell, A.",
-            "status": "Closed",
+            "status": "Waitlist",
             "units": "0.0",
             "enrollment": {},
-            "waitlist": null,
+            "waitlist": {
+              "taken": 1,
+              "capacity": 4
+            },
             "meetings": [
               {
                 "days": "R",
@@ -362681,7 +362718,7 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Arisaka, K.\nTA",
-        "status": "Waitlist",
+        "status": "Closed",
         "units": "2.0",
         "enrollment": {},
         "waitlist": {
@@ -363345,7 +363382,7 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Arisaka, K.\nTA",
-        "status": "Waitlist",
+        "status": "Closed",
         "units": "2.0",
         "enrollment": {},
         "waitlist": {
@@ -364915,9 +364952,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 62,
+              "enrolled": 61,
               "capacity": 75,
-              "spots_left": 13
+              "spots_left": 14
             },
             "waitlist": null,
             "meetings": [
@@ -365073,9 +365110,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 72,
+              "enrolled": 73,
               "capacity": 75,
-              "spots_left": 3
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -368333,9 +368370,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 36,
+          "enrolled": 37,
           "capacity": 40,
-          "spots_left": 4
+          "spots_left": 3
         },
         "waitlist": null,
         "meetings": [
@@ -368356,9 +368393,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 36,
+              "enrolled": 37,
               "capacity": 40,
-              "spots_left": 4
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -370476,9 +370513,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 220,
+          "enrolled": 219,
           "capacity": 231,
-          "spots_left": 11
+          "spots_left": 12
         },
         "waitlist": null,
         "meetings": [
@@ -370690,9 +370727,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 18,
+              "enrolled": 17,
               "capacity": 19,
-              "spots_left": 1
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -371577,9 +371614,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 84,
+          "enrolled": 85,
           "capacity": 120,
-          "spots_left": 36
+          "spots_left": 35
         },
         "waitlist": null,
         "meetings": [
@@ -371678,9 +371715,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 18,
+              "enrolled": 19,
               "capacity": 20,
-              "spots_left": 2
+              "spots_left": 1
             },
             "waitlist": null,
             "meetings": [
@@ -372002,9 +372039,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 97,
+          "enrolled": 98,
           "capacity": 120,
-          "spots_left": 23
+          "spots_left": 22
         },
         "waitlist": null,
         "meetings": [
@@ -372068,9 +372105,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 17,
+              "enrolled": 18,
               "capacity": 20,
-              "spots_left": 3
+              "spots_left": 2
             },
             "waitlist": null,
             "meetings": [
@@ -373634,9 +373671,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 67,
+          "enrolled": 68,
           "capacity": 120,
-          "spots_left": 53
+          "spots_left": 52
         },
         "waitlist": null,
         "meetings": [
@@ -373657,9 +373694,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 16,
+              "enrolled": 17,
               "capacity": 20,
-              "spots_left": 4
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -374124,9 +374161,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 20,
+          "enrolled": 21,
           "capacity": 28,
-          "spots_left": 8
+          "spots_left": 7
         },
         "waitlist": {
           "taken": 0,
@@ -374150,9 +374187,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 20,
+              "enrolled": 21,
               "capacity": 28,
-              "spots_left": 8
+              "spots_left": 7
             },
             "waitlist": {
               "taken": 0,
@@ -375810,9 +375847,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0-12.0 Variable",
         "enrollment": {
-          "enrolled": 0,
+          "enrolled": 1,
           "capacity": 10,
-          "spots_left": 10
+          "spots_left": 9
         },
         "waitlist": null,
         "meetings": [
@@ -406049,9 +406086,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Beckner, M.E.",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 39,
+              "capacity": 40,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -406117,13 +406158,9 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Tran, T.L.",
-            "status": "Open",
+            "status": "Closed",
             "units": "0.0",
-            "enrollment": {
-              "enrolled": 39,
-              "capacity": 40,
-              "spots_left": 1
-            },
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
