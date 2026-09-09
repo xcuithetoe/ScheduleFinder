@@ -20,6 +20,8 @@ import time
 import re
 import base64
 import argparse
+import signal
+import atexit
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from bs4 import BeautifulSoup
 
@@ -198,7 +200,7 @@ def refresh_course_enrollment(course_code, course_record, model, term=DEFAULT_TE
 
     return course_record, changes
 
-def run_enrollment_refresh(input_file=COURSE_INFO_FILE, output_file=COURSE_INFO_FILE, start_index=0, limit=None):
+def run_enrollment_refresh(input_file=COURSE_INFO_FILE, output_file=COURSE_INFO_FILE, start_index=0, limit=None, checkpoint_interval=50, save_interval_sec=120):
     course_data = load_course_info(input_file)
     course_keys = sorted(list(course_data.keys()))
     total_courses = len(course_keys)
@@ -207,42 +209,69 @@ def run_enrollment_refresh(input_file=COURSE_INFO_FILE, output_file=COURSE_INFO_
     slice_keys = course_keys[start_index:end_index]
 
     print(f"[*] Starting enrollment refresh for courses {start_index + 1} to {end_index} (of {total_courses})")
+    print(f"[*] Checkpoint policy: every {checkpoint_interval} courses or {save_interval_sec}s")
 
     models = load_or_fetch_models(course_keys)
 
     updated_count = 0
     changed_count = 0
     skipped_count = 0
+    unsaved_changes = False
+    last_save_time = time.time()
 
-    for i, c_code in enumerate(slice_keys, start=start_index + 1):
-        c_record = course_data[c_code]
-        model = models.get(c_code)
-
-        if not model:
-            skipped_count += 1
-            continue
-
-        c_updated, changes = refresh_course_enrollment(c_code, c_record, model)
-        course_data[c_code] = c_updated
-        updated_count += 1
-        if changes > 0:
-            changed_count += 1
-
-        # Checkpoint save after every 5 courses or on changes
-        if changes > 0 or i % 5 == 0:
+    def do_save(reason="checkpoint"):
+        nonlocal unsaved_changes, last_save_time
+        if unsaved_changes:
+            print(f"  [💾] Saving progress to {output_file} ({reason})...", flush=True)
             save_course_info(course_data, output_file)
+            unsaved_changes = False
+            last_save_time = time.time()
 
-        print(f"[{i}/{total_courses}] {c_code}: {'Updated (' + str(changes) + ' changes)' if changes > 0 else 'Refreshed (no change)'}")
+    def signal_handler(signum, frame):
+        print("\n[!] Received interrupt signal. Saving pending changes...", flush=True)
+        do_save("signal interrupt")
+        print("[+] State safely saved. Exiting.", flush=True)
+        sys.exit(0)
 
-    # Final save for the batch
-    save_course_info(course_data, output_file)
+    try:
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
+    except Exception:
+        pass
+
+    try:
+        for i, c_code in enumerate(slice_keys, start=start_index + 1):
+            c_record = course_data[c_code]
+            model = models.get(c_code)
+
+            if not model:
+                skipped_count += 1
+                continue
+
+            c_updated, changes = refresh_course_enrollment(c_code, c_record, model)
+            course_data[c_code] = c_updated
+            updated_count += 1
+            if changes > 0:
+                changed_count += 1
+                unsaved_changes = True
+
+            # Checkpoint save on interval or elapsed time
+            now = time.time()
+            if unsaved_changes and (i % checkpoint_interval == 0 or (now - last_save_time) >= save_interval_sec):
+                do_save(f"course {i}/{total_courses}")
+
+            print(f"[{i}/{total_courses}] {c_code}: {'Updated (' + str(changes) + ' changes)' if changes > 0 else 'Refreshed (no change)'}", flush=True)
+
+    finally:
+        # Final save for the batch
+        do_save("final batch completion")
 
     print("\n" + "="*60)
     print(f"Enrollment Refresh Batch Completed (Courses {start_index + 1} to {end_index}):")
     print(f"  Refreshed: {updated_count}")
     print(f"  Sections with changes detected: {changed_count}")
     print(f"  Skipped (model missing): {skipped_count}")
-    print("="*60)
+    print("="*60, flush=True)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Fast UCLA SOC Enrollment Refresher")
@@ -250,6 +279,8 @@ if __name__ == '__main__':
     parser.add_argument('-o', '--output', default=COURSE_INFO_FILE, help="Output course_info.json")
     parser.add_argument('--start', type=int, default=0, help="Start index")
     parser.add_argument('--limit', type=int, default=None, help="Max courses to process")
+    parser.add_argument('--checkpoint-interval', type=int, default=50, help="Courses between disk saves")
+    parser.add_argument('--save-interval-sec', type=int, default=120, help="Max seconds between disk saves")
     args = parser.parse_args()
 
-    run_enrollment_refresh(args.input, args.output, args.start, args.limit)
+    run_enrollment_refresh(args.input, args.output, args.start, args.limit, args.checkpoint_interval, args.save_interval_sec)
