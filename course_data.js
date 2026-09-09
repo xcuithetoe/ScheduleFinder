@@ -1,5 +1,5 @@
 // UCLA Course Information Dataset
-window.COURSE_INFO_TIMESTAMP = 1788980057521; // 2026-09-09T18:54:17.521668+00:00
+window.COURSE_INFO_TIMESTAMP = 1788982100432; // 2026-09-09T19:28:20.432276+00:00
 window.COURSE_INFO = {
   "AEROST0001A": {
     "course": {
@@ -406049,13 +406049,9 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Beckner, M.E.",
-            "status": "Open",
+            "status": "Closed",
             "units": "0.0",
-            "enrollment": {
-              "enrolled": 39,
-              "capacity": 40,
-              "spots_left": 1
-            },
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -406121,9 +406117,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Tran, T.L.",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 39,
+              "capacity": 40,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {

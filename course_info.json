@@ -406047,13 +406047,9 @@
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Beckner, M.E.",
-            "status": "Open",
+            "status": "Closed",
             "units": "0.0",
-            "enrollment": {
-              "enrolled": 39,
-              "capacity": 40,
-              "spots_left": 1
-            },
+            "enrollment": {},
             "waitlist": null,
             "meetings": [
               {
@@ -406119,9 +406115,13 @@
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Tran, T.L.",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 39,
+              "capacity": 40,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
