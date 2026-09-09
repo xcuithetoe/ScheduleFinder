@@ -30,6 +30,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 DEFAULT_TERM = '26F'
 DEFAULT_OUTPUT = 'course_info.json'
+DEFAULT_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 
 # --- Strategy 1: Token-Bucket / Leaky-Bucket Rate Pacing ---
 class RateLimiter:
@@ -75,7 +76,7 @@ def init_session(term=DEFAULT_TERM, force=False):
         opener = get_session_opener()
         init_url = f"https://sa.ucla.edu/ro/Public/SOC/Results?t={term}&s_g_cd=%25&sBy=subject"
         headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "User-Agent": DEFAULT_UA,
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         }
         try:
@@ -105,11 +106,11 @@ def http_request_with_retry(req, max_retries=5, timeout=15):
                 return resp.read().decode("utf-8", errors="replace")
         except urllib.error.HTTPError as e:
             if e.code in [529, 429, 503] or "/Error/TooManyRequests" in getattr(e, "url", ""):
-                if attempt >= 2:
+                if attempt >= 1:
                     print(f"  [⚠️ Persistent HTTP {e.code} after {attempt+1} attempts] Skipping unqueryable section/course.")
                     return None
-                wait_time = 15 * (attempt + 1)
-                print(f"  [⚠️ Rate limit/529 detected (HTTP {e.code})] Pausing {wait_time}s before retry ({attempt+1}/2)...")
+                wait_time = 10
+                print(f"  [⚠️ Rate limit/529 detected (HTTP {e.code})] Pausing {wait_time}s before retry ({attempt+1}/1)...")
                 time.sleep(wait_time)
                 init_session(force=True)
             else:
@@ -213,7 +214,7 @@ def get_models_for_subject(term, subj_code):
         'btnIsInIndex': 'btn_inIndex'
     })
     url = f"https://sa.ucla.edu/ro/Public/SOC/Results?{params}"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    headers = {"User-Agent": DEFAULT_UA}
     try:
         req = urllib.request.Request(url, headers=headers)
         html = http_request_with_retry(req, max_retries=3, timeout=15)
@@ -242,7 +243,7 @@ def fetch_summary_with_model(model):
     })
     url = f"https://sa.ucla.edu/ro/Public/SOC/Results/GetCourseSummary?{params}"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "User-Agent": DEFAULT_UA,
         "X-Requested-With": "XMLHttpRequest",
         "Referer": "https://sa.ucla.edu/ro/Public/SOC/Results"
     }
@@ -258,7 +259,7 @@ def fetch_full_class_detail(term, subject, catalog_no, class_id, class_no):
         'class_no': f" {class_no.strip()}  "
     })
     url = f"https://sa.ucla.edu/ro/Public/SOC/Results/ClassDetail?{params}"
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    headers = {"User-Agent": DEFAULT_UA}
     
     try:
         req = urllib.request.Request(url, headers=headers)
@@ -389,7 +390,7 @@ def fetch_tooltip_by_params(term_cd, subj_area_cd, crs_catlg_no, class_id, class
     })
     url = f"https://sa.ucla.edu/ro/Public/SOC/Results/ClassDetailTooltip?{params}"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "User-Agent": DEFAULT_UA,
         "X-Requested-With": "XMLHttpRequest"
     }
     req = urllib.request.Request(url, headers=headers)
