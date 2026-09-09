@@ -222,7 +222,7 @@ def run_enrollment_refresh(input_file=COURSE_INFO_FILE, output_file=COURSE_INFO_
     def do_save(reason="checkpoint"):
         nonlocal unsaved_changes, last_save_time
         if unsaved_changes:
-            print(f"  [💾] Saving progress to {output_file} ({reason})...", flush=True)
+            print(f"  [SAVE] Saving progress to {output_file} ({reason})...", flush=True)
             save_course_info(course_data, output_file)
             unsaved_changes = False
             last_save_time = time.time()

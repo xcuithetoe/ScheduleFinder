@@ -48,6 +48,13 @@ When scanning large department course lists:
 - Rather than sequentially polling SOC for every course code (which takes 1–2 requests per course even if not offered), load or generate a subject-level model map (`all_soc_models_26F.json`).
 - Verify whether the course code exists in the pre-indexed model map in memory. Unoffered courses are skipped in $O(1)$ time without making external HTTP requests.
 
+### 2.3 Remote & Embedded Execution Guidelines (Raspberry Pi / MicroSD)
+When executing scrapers on embedded, low-power, or remote systems (e.g. Raspberry Pi 3, SBCs with MicroSD storage):
+- **Flash / SD Card Write Bottlenecks**: Serializing and writing large JSON files (such as the 16 MB `course_info.json`) to flash media takes ~5+ seconds per write. Never save checkpoints after every individual course or detected change.
+- **Buffered Checkpointing**: Buffer changes in memory and configure checkpoint saves to disk at intervals of 50–100 courses or every 120–180 seconds.
+- **Graceful Signal Handling**: Register handlers for `SIGINT` and `SIGTERM` to perform an immediate atomic flush of in-memory data to disk prior to process exit, ensuring zero data loss on manual interruption.
+- **Dedicated Enrollment Refresher**: For periodic enrollment updates, do not perform full metadata scrapes. Run [`scripts/refresh_enrollment.py`](file:///c:/Users/boomer/Desktop/schedule_cleaner/scripts/refresh_enrollment.py), which queries only lecture and discussion section rows, recalculates open discussion restrictions, and finishes in ~10–12 minutes while strictly honoring the 3.5 req/s rate limit.
+
 ---
 
 ## 3. Scraping Procedures
@@ -55,10 +62,15 @@ When scanning large department course lists:
 ### Option A: Fast Direct AJAX Scraper (Recommended)
 A robust Python pipeline is available at [`scripts/scrape_courses.py`](file:///c:/Users/boomer/Desktop/schedule_cleaner/scripts/scrape_courses.py) and [`scripts/iterative_scraper.py`](file:///c:/Users/boomer/Desktop/schedule_cleaner/scripts/iterative_scraper.py) which bypasses browser overhead and directly queries UCLA Registrar AJAX endpoints (`GetCourseSummary`, `ClassDetail`, `ClassDetailTooltip`). It extracts full course metadata, requisites, GE categories, final exams, warning/info indicators, discussion section rosters, and enrollment restrictions (e.g., "New Transfers Only").
 
-See the full workflow in [`.agents/workflows/course-data-scraping.md`](file:///c:/Users/boomer/Desktop/schedule_cleaner/.agents/workflows/course-data-scraping.md).
-
+For updating enrollment numbers on existing courses, use the fast refresher:
 ```bash
-# Example: Scrape courses directly into course_info.json
+# Fast enrollment refresher (10-12 min full run, buffered I/O)
+python scripts/refresh_enrollment.py --checkpoint-interval 50
+
+# Ingest new courses from a text list
+python scripts/iterative_scraper.py -i new_courses.txt -o course_info.json
+
+# Scrape specific courses directly into course_info.json
 python scripts/scrape_courses.py "Physics 1A" "ARCH&UD 30" -o course_info.json
 ```
 
