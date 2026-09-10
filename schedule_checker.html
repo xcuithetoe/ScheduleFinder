@@ -643,35 +643,555 @@
     .preview-sections-box {
       font-size: 0.82rem;
       color: #000000;
-      margin: 10px 0;
+      margin: 14px 0 10px 0;
       border-top: 1px solid #e4e4e7;
-      padding-top: 10px;
+      padding-top: 14px;
+    }
+
+    .preview-sections-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .preview-sections-title {
+      font-size: 0.90rem;
+      font-weight: 800;
+      color: #09090b;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .preview-sections-title .ui-icon {
+      width: 15px;
+      height: 15px;
+    }
+
+    .preview-sections-count {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: #71717a;
+      background: #f4f4f5;
+      padding: 2px 9px;
+      border-radius: 12px;
+      border: 1px solid #e4e4e7;
     }
 
     .preview-sections-list {
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      margin-top: 6px;
-      max-height: 160px;
+      gap: 10px;
+      max-height: 420px;
       overflow-y: auto;
       padding-right: 4px;
     }
 
-    .preview-sec-row {
+    .offering-card {
+      background: #ffffff;
+      border: 1px solid #e4e4e7;
+      border-radius: 6px;
+      padding: 11px 13px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .offering-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .offering-card.is-closed {
+      background: #fafafa;
+      border-color: #f1f1f4;
+    }
+
+    .offering-card-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4px 8px;
-      background: #f4f4f5;
-      border: 1px solid #e4e4e7;
-      border-radius: 3px;
-      font-size: 0.8rem;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 9px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f4f4f5;
     }
 
-    .preview-sec-row.closed {
-      opacity: 0.7;
-      font-style: italic;
+    .offering-header-left {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .offering-lec-badge {
+      font-size: 0.80rem;
+      font-weight: 800;
+      background: #09090b;
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .offering-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      line-height: 1.3;
+    }
+
+    .offering-status-pill.status-open {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .offering-status-pill.status-waitlist {
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .offering-status-pill.status-closed {
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    .status-indicator-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .offering-seats-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 185px;
+      min-width: 185px;
+      max-width: 185px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: #374151;
+      background: #f3f4f6;
+      padding: 3px 6px;
+      border-radius: 9999px;
+      border: 1px solid #e5e7eb;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .offering-seats-pill .seats-ratio {
+      color: #6b7280;
+      font-size: 0.70rem;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+
+    /* Clean text pill with transparent color fill and standardized length */
+    .offering-seats-battery-pill {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 185px;
+      min-width: 185px;
+      max-width: 185px;
+      padding: 3px 6px;
+      border-radius: 9999px;
+      font-size: 0.73rem;
+      font-weight: 600;
+      color: #1e293b;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      line-height: 1.3;
+      user-select: none;
+      box-sizing: border-box;
+      margin-right: 4px;
+      gap: 3px;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .offering-seats-battery-pill .seats-pct {
+      font-weight: 700;
+      font-size: 0.70rem;
+    }
+
+    .offering-seats-battery-pill.level-high .seats-pct {
+      color: #15803d;
+    }
+
+    .offering-seats-battery-pill.level-med .seats-pct {
+      color: #c2410c;
+    }
+
+    .offering-seats-battery-pill.level-low .seats-pct {
+      color: #b91c1c;
+    }
+
+    .offering-seats-battery-pill.mini {
+      padding: 2px 6px;
+      font-size: 0.69rem;
+      border-radius: 9999px;
+      width: 185px;
+      min-width: 185px;
+      max-width: 185px;
+    }
+
+    .offering-seats-battery-pill .seats-ratio {
+      color: #64748b;
+      font-size: 0.70rem;
+      font-weight: 500;
+      margin-left: 2px;
+    }
+
+    .offering-disc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+    }
+
+    .offering-disc-badge .ui-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .offering-disc-badge.has-open {
+      background: #f0fdf4;
+      color: #166534;
+      border-color: #bbf7d0;
+    }
+
+    .offering-disc-badge.all-closed {
+      background: #fef2f2;
+      color: #991b1b;
+      border-color: #fecaca;
+    }
+
+    .offering-blocks-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1.35fr 1.05fr 1.15fr;
+      gap: 10px 14px;
+      background: #f8fafc;
+      border: 1px solid #f1f5f9;
+      border-radius: 5px;
+      padding: 9px 12px;
+      align-items: start;
+    }
+
+    @media (max-width: 820px) {
+      .offering-blocks-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .offering-blocks-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .offering-block {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .offering-block-label {
+      font-size: 0.67rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .offering-block-label .ui-icon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .offering-block-val {
+      font-size: 0.79rem;
+      color: #1e293b;
+      line-height: 1.35;
+    }
+
+    .time-row {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .time-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .day-badge {
+      background: #e2e8f0;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 0.69rem;
+      padding: 1px 5px;
+      border-radius: 3px;
+      line-height: 1.2;
+    }
+
+    .time-text {
+      font-weight: 600;
+      color: #0f172a;
+      white-space: nowrap;
+    }
+
+    .loc-text {
+      font-weight: 500;
+      color: #334155;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    .inst-text {
+      font-weight: 600;
+      color: #0f172a;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .disc-text {
+      font-weight: 600;
+      color: #0f172a;
+      white-space: nowrap;
+    }
+
+    .disc-open-tag {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+      line-height: 1.3;
+    }
+
+    .disc-open-tag.tag-open {
+      background: #ecfdf5;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .disc-open-tag.tag-closing {
+      background: #fff7ed;
+      color: #c2410c;
+      border: 1px solid #fed7aa;
+    }
+
+    .disc-open-tag.tag-none {
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    /* Expandable Discussion Offerings */
+    .offering-disc-details {
+      margin-top: 8px;
+      border-top: 1px dashed #e2e8f0;
+      padding-top: 6px;
+    }
+
+    .offering-disc-summary {
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #475569;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      padding: 4px 2px;
+      transition: color 0.15s ease;
+    }
+
+    .offering-disc-summary:hover {
+      color: #0f172a;
+    }
+
+    .offering-disc-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .offering-disc-summary::marker {
+      display: none;
+    }
+
+    .disc-expand-icon {
+      font-size: 0.8rem;
+      transition: transform 0.2s ease;
+    }
+
+    .offering-disc-details[open] .disc-expand-icon {
+      transform: rotate(180deg);
+    }
+
+    .disc-grid-table {
+      margin-top: 6px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      overflow-x: auto;
+      font-size: 0.75rem;
+    }
+
+    .disc-grid-header {
+      display: grid;
+      grid-template-columns: 75px 1.1fr 1.3fr 1fr 200px;
+      padding: 5px 8px;
+      background: #f1f5f9;
+      color: #64748b;
+      font-weight: 700;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .disc-grid-row {
+      display: grid;
+      grid-template-columns: 75px 1.1fr 1.3fr 1fr 200px;
+      padding: 6px 8px;
+      align-items: center;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background-color 0.1s ease;
+    }
+
+    .disc-grid-row:last-child {
+      border-bottom: none;
+    }
+
+    .disc-grid-row:hover {
+      background-color: #f8fafc;
+    }
+
+    .disc-grid-row.disc-closed {
+      opacity: 0.65;
+      background: #fbfbfb;
+    }
+
+    .disc-id-badge {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .disc-cell-time {
+      font-weight: 500;
+      color: #1e293b;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .disc-cell-loc {
+      color: #475569;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .disc-cell-inst {
+      color: #475569;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .disc-cell-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .disc-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    .disc-status-pill.status-open {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .disc-status-pill.status-waitlist {
+      background: #fffbeb;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
+    .disc-status-pill.status-closed {
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    .disc-spots-text {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 185px;
+      min-width: 185px;
+      max-width: 185px;
+      font-size: 0.69rem;
+      color: #64748b;
+      font-weight: 600;
+      background: #f8fafc;
+      padding: 2px 6px;
+      border-radius: 9999px;
+      border: 1px solid #e2e8f0;
+      box-sizing: border-box;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    @media (max-width: 680px) {
+      .disc-grid-header {
+        display: none;
+      }
+      .disc-grid-row {
+        grid-template-columns: 1fr;
+        gap: 3px;
+        padding: 8px;
+      }
     }
 
     .preview-eligibility-panel {
@@ -867,27 +1387,15 @@
       line-height: 1.25;
       z-index: 10;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-      transition: transform 0.1s ease, box-shadow 0.1s ease;
       box-sizing: border-box;
       white-space: nowrap;
     }
 
-    .cal-block:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
-      z-index: 20;
-    }
-
     .cal-block.has-conflict {
-      outline: 2px solid #dc2626 !important;
-      border: 2px solid #dc2626 !important;
-      box-shadow: 0 0 0 1px #dc2626, 0 2px 6px rgba(220, 38, 38, 0.35) !important;
+      border: 3px dashed #dc2626 !important;
+      outline: none !important;
+      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.35) !important;
       z-index: 25;
-    }
-
-    .cal-block.has-conflict:hover {
-      z-index: 35;
-      box-shadow: 0 0 0 2px #dc2626, 0 4px 10px rgba(220, 38, 38, 0.5) !important;
     }
 
     .cal-block.cal-lecture {
@@ -1319,6 +1827,108 @@
       font-weight: 700;
     }
 
+    /* Schedule Optimizer: Show Original Seamless Transition */
+    .btn-show-original {
+      transition: all 0.15s ease;
+      font-size: 0.80rem;
+      padding: 5px 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .btn-show-original:not(:disabled):hover,
+    .btn-show-original.btn-active-preview {
+      background: #000000;
+      color: #ffffff;
+      border-color: #000000;
+    }
+
+    .btn-show-original:disabled {
+      opacity: 0.65;
+      cursor: default;
+      background: #f4f4f5;
+      color: #71717a;
+      border-color: #e4e4e7;
+    }
+
+    .cal-morph-block {
+      position: absolute;
+      top: var(--opt-top);
+      left: var(--opt-left);
+      height: var(--opt-height);
+      width: calc((100% - 60px) / 5 - 4px);
+      z-index: 10;
+      border-radius: 4px;
+      padding: 3px 5px;
+      overflow: hidden;
+      line-height: 1.25;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+      pointer-events: auto;
+      transition: top 0.24s cubic-bezier(0.4, 0, 0.2, 1),
+                  left 0.24s cubic-bezier(0.4, 0, 0.2, 1),
+                  height 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .rank-card.showing-original .cal-morph-block {
+      top: var(--orig-top);
+      left: var(--orig-left);
+      height: var(--orig-height);
+    }
+
+    .cal-opt-only {
+      position: absolute;
+      width: calc((100% - 60px) / 5 - 4px);
+      z-index: 10;
+      border-radius: 4px;
+      padding: 3px 5px;
+      overflow: hidden;
+      line-height: 1.25;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+      pointer-events: auto;
+      opacity: 1;
+      transition: opacity 0.2s ease;
+    }
+
+    .rank-card.showing-original .cal-opt-only {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .cal-orig-only {
+      position: absolute;
+      width: calc((100% - 60px) / 5 - 4px);
+      z-index: 10;
+      border-radius: 4px;
+      padding: 3px 5px;
+      overflow: hidden;
+      line-height: 1.25;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      box-sizing: border-box;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .rank-card.showing-original .cal-orig-only {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lbl-orig {
+      display: none;
+    }
+    .lbl-opt {
+      display: inline;
+    }
+    .rank-card.showing-original .lbl-opt {
+      display: none;
+    }
+    .rank-card.showing-original .lbl-orig {
+      display: inline;
+    }
+
     .rank-section-title {
       font-size: 0.8rem;
       text-transform: uppercase;
@@ -1379,6 +1989,9 @@
       <div class="header-status" id="datasetStatus">
         <span class="status-dot"></span>
         <span id="datasetText">Loading courses...</span>
+        <button class="btn btn-secondary btn-sm" id="btnExportState" onclick="exportScheduleState()" title="Download a JSON backup of your schedule and personal characteristics"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Backup</button>
+        <button class="btn btn-secondary btn-sm" id="btnImportState" onclick="triggerImportState()" title="Restore your schedule and personal characteristics from a backup file"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg> Restore</button>
+        <input type="file" id="stateImportFileInput" accept=".json" style="display: none;" onchange="handleStateImportFile(event)">
         <button class="btn btn-secondary btn-sm" id="btnLoadFile" style="display: none; margin-left: 8px;" onclick="triggerFileInput()"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><polygon points="22 10 18 20 2 20 6 10 22 10"></polygon></svg> Open course_info.json</button>
         <input type="file" id="jsonFileInput" accept=".json" style="display: none;" onchange="handleManualFile(event)">
       </div>
@@ -1476,7 +2089,10 @@
         </div>
       </div>
 
-      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #e4e4e7; display: flex; justify-content: flex-end;">
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #e4e4e7; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 0.8rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px;">
+          <svg class="ui-icon" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg> Personal characteristics auto-save to browser storage
+        </span>
         <button class="btn btn-primary" onclick="collapseProfile()">Save & Collapse Step 1 ↑</button>
       </div>
     </div>
@@ -2428,6 +3044,7 @@
       const prof = getUserProfile();
       try {
         localStorage.setItem('ucla_schedule_profile', JSON.stringify(prof));
+        localStorage.setItem('ucla_profile_onboarding_done', 'true');
       } catch (e) {}
 
       updateCollapsedSummary(prof);
@@ -2480,15 +3097,20 @@
     }
 
     function loadSavedProfile() {
+      let saved = null;
       try {
-        const saved = localStorage.getItem('ucla_schedule_profile');
-        if (saved) {
-          const prof = JSON.parse(saved);
+        const savedStr = localStorage.getItem('ucla_schedule_profile');
+        if (savedStr) {
+          saved = JSON.parse(savedStr);
+          const prof = saved;
           if (prof.studentType) {
             const rad = document.querySelector(`input[name="studentType"][value="${prof.studentType}"]`);
             if (rad) rad.checked = true;
           }
-          if (prof.standing) document.getElementById('standingSelect').value = prof.standing;
+          if (prof.standing) {
+            const el = document.getElementById('standingSelect');
+            if (el) el.value = prof.standing;
+          }
           if (prof.major) {
             const majorInput = document.getElementById('majorInput');
             if (majorInput) majorInput.value = prof.major;
@@ -2504,23 +3126,43 @@
               majorSelect.value = prof.major;
             }
           }
-          if (prof.isPreMajor !== undefined) document.getElementById('chkPreMajor').checked = prof.isPreMajor;
-          if (prof.minor) document.getElementById('minorInput').value = prof.minor;
-          if (prof.honors !== undefined) document.getElementById('chkHonors').checked = prof.honors;
-          if (prof.deptConsent !== undefined) document.getElementById('chkDeptConsent').checked = prof.deptConsent;
-          if (prof.instructorConsent !== undefined) document.getElementById('chkInstructorConsent').checked = prof.instructorConsent;
+          if (prof.isPreMajor !== undefined) {
+            const el = document.getElementById('chkPreMajor');
+            if (el) el.checked = prof.isPreMajor;
+          }
+          if (prof.minor) {
+            const el = document.getElementById('minorInput');
+            if (el) el.value = prof.minor;
+          }
+          if (prof.honors !== undefined) {
+            const el = document.getElementById('chkHonors');
+            if (el) el.checked = prof.honors;
+          }
+          if (prof.deptConsent !== undefined) {
+            const el = document.getElementById('chkDeptConsent');
+            if (el) el.checked = prof.deptConsent;
+          }
+          if (prof.instructorConsent !== undefined) {
+            const el = document.getElementById('chkInstructorConsent');
+            if (el) el.checked = prof.instructorConsent;
+          }
         }
 
         const savedDraft = localStorage.getItem('ucla_saved_draft_schedule');
         const hasSavedDraft = savedDraft && savedDraft !== '[]';
         const onboardingDone = localStorage.getItem('ucla_profile_onboarding_done');
-        if (onboardingDone !== 'true' && !hasSavedDraft) {
-          // First-time user: keep collapsed by default and launch setup wizard
+        if (onboardingDone !== 'true' && !hasSavedDraft && !saved) {
+          // First-time user with no prior saved data: launch setup wizard
           collapseProfile();
           setTimeout(() => {
             openOnboardingWizard();
           }, 80);
         } else {
+          if (saved) {
+            try {
+              localStorage.setItem('ucla_profile_onboarding_done', 'true');
+            } catch (e) {}
+          }
           // Returning user: collapsed by default unless explicitly expanded
           const isCollapsed = localStorage.getItem('ucla_profile_collapsed');
           if (isCollapsed === 'false') {
@@ -3446,7 +4088,8 @@
       return {
         daysTime: daysTimeDisplay,
         location: locDisplay,
-        fullSummary: fullSummary
+        fullSummary: fullSummary,
+        parts: parts
       };
     }
 
@@ -3555,11 +4198,46 @@
       if (previewCard) previewCard.style.display = 'none';
     }
 
-    function toggleManualOverride(checked) {
-      const area = document.getElementById('overrideActionArea');
-      if (area) {
-        area.style.display = checked ? 'block' : 'none';
+
+    function renderBatterySeatPill(spotsLeft, capacity, enrolled, isMini = false, labelSuffix = 'spots left') {
+      if (spotsLeft === null || spotsLeft === undefined) return '';
+      const clampedSpots = Math.max(0, spotsLeft);
+      
+      if (!capacity || capacity <= 0) {
+        return `<span class="offering-seats-battery-pill ${isMini ? 'mini' : ''}"><span class="seats-count">${clampedSpots} ${labelSuffix}</span></span>`;
       }
+
+      const pct = Math.min(100, Math.max(0, Math.round((clampedSpots / capacity) * 100)));
+      
+      let levelClass = 'level-high';
+      let fillColor = '#bbf7d0';
+      let borderColor = '#86efac';
+
+      if (pct <= 15) {
+        levelClass = 'level-low';
+        fillColor = pct === 0 ? '#f1f5f9' : '#fecaca';
+        borderColor = pct === 0 ? '#cbd5e1' : '#fca5a5';
+      } else if (pct <= 50) {
+        levelClass = 'level-med';
+        fillColor = '#fed7aa';
+        borderColor = '#fdba74';
+      }
+
+      const gradientBg = pct === 0 
+        ? '#f8fafc' 
+        : (pct >= 100 ? fillColor : `linear-gradient(to right, ${fillColor} 0%, ${fillColor} ${pct}%, #f8fafc ${pct}%, #f8fafc 100%)`);
+
+      const ratioText = (enrolled !== undefined && capacity) ? `<span class="seats-ratio">(${enrolled}/${capacity})</span>` : '';
+
+      return `
+        <span class="offering-seats-battery-pill ${isMini ? 'mini' : ''} ${levelClass}" 
+              style="background: ${gradientBg}; border-color: ${borderColor};" 
+              title="${pct}% of seats available (${clampedSpots}/${capacity})">
+          <span class="seats-count">${clampedSpots} ${labelSuffix}</span>
+          <span class="seats-pct">(${pct}%)</span>
+          ${ratioText}
+        </span>
+      `;
     }
 
     function renderCoursePreview(rawKey) {
@@ -3629,21 +4307,169 @@
       if (lectures.length > 0) {
         sectionsSummaryHtml = `
           <div class="preview-sections-box">
-            <strong>${ICONS.clock} Schedule & Section Offerings (${lectures.length} Lecture Option${lectures.length > 1 ? 's' : ''}):</strong>
+            <div class="preview-sections-header-bar">
+              <span class="preview-sections-title">${ICONS.calendar} Schedule & Section Offerings</span>
+              <span class="preview-sections-count">${lectures.length} Lecture Option${lectures.length > 1 ? 's' : ''}</span>
+            </div>
             <div class="preview-sections-list">
               ${lectures.map(l => {
                 const meetSummary = formatMeetingsSummary(l.meetings);
                 const lInst = (l.instructor || 'Staff').replace(/\n/g, ', ');
                 const lDiscs = l.discussions || [];
                 const openDiscs = lDiscs.filter(d => d.status === 'Open').length;
-                const discStr = lDiscs.length > 0 ? ` • ${lDiscs.length} discussion(s) (${openDiscs} open)` : ' • No discussion required';
                 const isClosed = l.status === 'Closed';
+                const isWaitlist = l.status === 'Waitlist';
+                const statusClass = isClosed ? 'status-closed' : (isWaitlist ? 'status-waitlist' : 'status-open');
+                const statusText = l.status || (isClosed ? 'Closed' : 'Open');
+
+                const enrolled = l.enrollment?.enrolled;
+                const capacity = l.enrollment?.capacity;
+                const spotsLeft = l.enrollment?.spots_left ?? (capacity && enrolled !== undefined ? Math.max(0, capacity - enrolled) : null);
+                let seatsBadgeHtml = '';
+                if (spotsLeft !== null && capacity) {
+                  const isSectionOpen = !isClosed && !isWaitlist;
+                  if (isSectionOpen) {
+                    seatsBadgeHtml = renderBatterySeatPill(spotsLeft, capacity, enrolled, false, 'spots left');
+                  } else {
+                    seatsBadgeHtml = `<span class="offering-seats-pill">${spotsLeft} spots left <span class="seats-ratio">(${enrolled}/${capacity})</span></span>`;
+                  }
+                }
+
+                // Expandable discussions list
+                let discAccordionHtml = '';
+                if (lDiscs.length > 0) {
+                  discAccordionHtml = `
+                    <details class="offering-disc-details">
+                      <summary class="offering-disc-summary">
+                        <span>View all ${lDiscs.length} discussion sections (${openDiscs} open)</span>
+                        <span class="disc-expand-icon">▾</span>
+                      </summary>
+                      <div class="disc-grid-table">
+                        <div class="disc-grid-header">
+                          <span>Section</span>
+                          <span>Time & Days</span>
+                          <span>Location</span>
+                          <span>Instructor</span>
+                          <span>Availability</span>
+                        </div>
+                        ${lDiscs.map(d => {
+                          const dMeet = formatMeetingsSummary(d.meetings);
+                          const isDClosed = d.status === 'Closed';
+                          const isDWaitlist = d.status === 'Waitlist';
+                          const dStatusClass = isDClosed ? 'status-closed' : (isDWaitlist ? 'status-waitlist' : 'status-open');
+                          const dEnrolled = d.enrollment?.enrolled;
+                          const dCap = d.enrollment?.capacity;
+                          const dSpots = d.enrollment?.spots_left ?? (dCap && dEnrolled !== undefined ? Math.max(0, dCap - dEnrolled) : null);
+                          const dInst = (d.instructor || 'TA').replace(/\n/g, ', ');
+                          const isDSectionOpen = !isDClosed && !isDWaitlist;
+                          let dSeatsHtml = '';
+                          if (dSpots !== null && dCap) {
+                            if (isDSectionOpen) {
+                              dSeatsHtml = renderBatterySeatPill(dSpots, dCap, dEnrolled, true, 'left');
+                            } else {
+                              dSeatsHtml = `<span class="disc-spots-text">${dSpots} left <span class="seats-ratio">(${dEnrolled}/${dCap})</span></span>`;
+                            }
+                          } else if (dSpots !== null) {
+                            dSeatsHtml = `<span class="disc-spots-text">${dSpots} left</span>`;
+                          }
+
+                          const showStatusPill = !isDSectionOpen || !dSeatsHtml;
+                          const statusPillHtml = showStatusPill ? `
+                            <span class="disc-status-pill ${dStatusClass}">
+                              <span class="status-indicator-dot"></span>
+                              ${d.status || 'N/A'}
+                            </span>
+                          ` : '';
+
+                          return `
+                            <div class="disc-grid-row ${isDClosed ? 'disc-closed' : ''}">
+                              <div class="disc-cell-sec">
+                                <span class="disc-id-badge">${d.section_id}</span>
+                              </div>
+                              <div class="disc-cell-time">
+                                ${dMeet.daysTime}
+                              </div>
+                              <div class="disc-cell-loc" title="${dMeet.location}">
+                                ${dMeet.location}
+                              </div>
+                              <div class="disc-cell-inst" title="${dInst}">
+                                ${dInst}
+                              </div>
+                              <div class="disc-cell-status">
+                                ${statusPillHtml}
+                                ${dSeatsHtml}
+                              </div>
+                            </div>
+                          `;
+                        }).join('')}
+                      </div>
+                    </details>
+                  `;
+                }
+
+                let discTextHtml = '';
+                if (lDiscs.length > 0) {
+                  if (openDiscs === 0) {
+                    discTextHtml = '<span class="disc-text">All closed</span>';
+                  } else {
+                    discTextHtml = `<span class="disc-text">${openDiscs}/${lDiscs.length} section${lDiscs.length > 1 ? 's' : ''} open</span>`;
+                  }
+                } else {
+                  discTextHtml = '<span style="color: #71717a; font-style: italic;">No discussion</span>';
+                }
+
                 return `
-                  <div class="preview-sec-row ${isClosed ? 'closed' : ''}">
-                    <div>
-                      <strong>${l.section_id}${isClosed ? ' [Closed]' : ''}:</strong> ${meetSummary.fullSummary} • ${lInst}${discStr}
+                  <div class="offering-card ${isClosed ? 'is-closed' : ''}">
+                    <div class="offering-card-header">
+                      <div class="offering-header-left">
+                        <span class="offering-lec-badge">${l.section_id}</span>
+                        <span class="offering-status-pill ${statusClass}">
+                          <span class="status-indicator-dot"></span> ${statusText}
+                        </span>
+                        ${seatsBadgeHtml}
+                      </div>
                     </div>
-                    <span style="font-weight: 700; font-size: 0.76rem; ${isClosed ? 'color: #b91c1c;' : 'color: #000000;'}">${l.status || 'Status N/A'}</span>
+
+                    <div class="offering-blocks-grid">
+                      <!-- Block 1: Time & Schedule -->
+                      <div class="offering-block offering-col-time">
+                        <div class="offering-block-label">${ICONS.clock} Schedule</div>
+                        <div class="offering-block-val">
+                          ${(meetSummary.parts || []).map(p => `
+                            <div class="time-row">
+                              <span class="day-badge">${p.days}</span>
+                              <span class="time-text">${p.time}</span>
+                            </div>
+                          `).join('')}
+                        </div>
+                      </div>
+
+                      <!-- Block 2: Location -->
+                      <div class="offering-block offering-col-loc">
+                        <div class="offering-block-label">${ICONS.mapPin} Location</div>
+                        <div class="offering-block-val">
+                          <span class="loc-text" title="${meetSummary.location}">${meetSummary.location}</span>
+                        </div>
+                      </div>
+
+                      <!-- Block 3: Instructor -->
+                      <div class="offering-block offering-col-inst">
+                        <div class="offering-block-label">${ICONS.user} Instructor</div>
+                        <div class="offering-block-val">
+                          <span class="inst-text" title="${lInst}">${lInst}</span>
+                        </div>
+                      </div>
+
+                      <!-- Block 4: Discussions -->
+                      <div class="offering-block offering-col-disc">
+                        <div class="offering-block-label">${ICONS.messageSquare} Discussions</div>
+                        <div class="offering-block-val">
+                          ${discTextHtml}
+                        </div>
+                      </div>
+                    </div>
+
+                    ${discAccordionHtml}
                   </div>
                 `;
               }).join('')}
@@ -3878,9 +4704,6 @@
         const payload = DRAFT_SCHEDULE.map(item => ({
           rawKey: item.rawKey,
           displayCode: item.displayCode,
-          course: item.course,
-          allLectures: item.allLectures,
-          eligibleLectures: item.eligibleLectures,
           selectedLectureId: item.selectedLectureId,
           selectedDiscussionId: item.selectedDiscussionId,
           isOverridden: !!item.isOverridden,
@@ -3904,13 +4727,18 @@
         const savedList = JSON.parse(savedStr);
         if (!Array.isArray(savedList) || savedList.length === 0) return;
 
-        const profile = getUserProfile();
         const hasDb = (typeof COURSE_DATABASE === 'object') && (Object.keys(COURSE_DATABASE).length > 0);
+        if (!hasDb) {
+          // Defer restoring draft schedule until course catalog database is initialized
+          return;
+        }
+
+        const profile = getUserProfile();
         const restored = [];
 
         for (const savedItem of savedList) {
           const rawKey = savedItem.rawKey;
-          const cdata = hasDb ? COURSE_DATABASE[rawKey] : null;
+          const cdata = COURSE_DATABASE[rawKey];
 
           // Full course object and lectures: use fresh catalog if available, or fall back to cached course data
           const courseObj = cdata?.course || savedItem.course;
@@ -4010,6 +4838,71 @@
       } catch (e) {
         console.warn('Could not restore saved draft schedule:', e);
       }
+    }
+
+    // -------------------------------------------------------------
+    // EXPORT & IMPORT BACKUP SYSTEM (Foolproof persistence)
+    // -------------------------------------------------------------
+    function exportScheduleState() {
+      try {
+        const prof = getUserProfile();
+        const draftItems = DRAFT_SCHEDULE.map(item => ({
+          rawKey: item.rawKey,
+          displayCode: item.displayCode,
+          selectedLectureId: item.selectedLectureId,
+          selectedDiscussionId: item.selectedDiscussionId,
+          isOverridden: !!item.isOverridden,
+          note: item.note || ''
+        }));
+        const backupData = {
+          version: 1,
+          exportedAt: new Date().toISOString(),
+          profile: prof,
+          draftSchedule: draftItems
+        };
+        const blob = new Blob([JSON.stringify(backupData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        const dateStr = new Date().toISOString().slice(0, 10);
+        a.href = url;
+        a.download = `ucla_schedule_backup_${dateStr}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } catch (e) {
+        alert('Failed to export state: ' + e.message);
+      }
+    }
+
+    function triggerImportState() {
+      const input = document.getElementById('stateImportFileInput');
+      if (input) input.click();
+    }
+
+    function handleStateImportFile(event) {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          if (parsed.profile) {
+            localStorage.setItem('ucla_schedule_profile', JSON.stringify(parsed.profile));
+            localStorage.setItem('ucla_profile_onboarding_done', 'true');
+            loadSavedProfile();
+          }
+          if (Array.isArray(parsed.draftSchedule)) {
+            localStorage.setItem('ucla_saved_draft_schedule', JSON.stringify(parsed.draftSchedule));
+            loadSavedDraftSchedule();
+          }
+          alert('✓ Successfully restored schedule and personal characteristics!');
+        } catch (err) {
+          alert('Failed to restore backup file: ' + err.message);
+        }
+        event.target.value = '';
+      };
+      reader.readAsText(file);
     }
 
     function reevaluateDraftScheduleForProfile() {
@@ -4598,7 +5491,7 @@
         block.style.backgroundColor = col.tintBg;
         block.style.color = col.darkText;
         block.style.borderColor = hasConflict ? '#dc2626' : col.solid;
-        block.style.borderLeft = hasConflict ? '5px solid #dc2626' : `5px solid ${col.solid}`;
+        block.style.borderLeft = hasConflict ? '3px dashed #dc2626' : `5px solid ${col.solid}`;
       } else {
         block.style.backgroundColor = col.solid;
         block.style.color = '#ffffff';
@@ -4998,6 +5891,86 @@
       showOptimizationResultsModal(validSchedules, totalCombos, relaxedEarlyCourses);
     }
 
+    function getDraftOriginalMeetings() {
+      const allMeetings = [];
+      DRAFT_SCHEDULE.forEach((item) => {
+        const currentLecObj = item.eligibleLectures.find(l => l.lecture.section_id === item.selectedLectureId) || item.eligibleLectures[0];
+        const currentLec = currentLecObj?.lecture;
+        const currentDisc = (currentLecObj?.allDiscussions || currentLecObj?.eligibleDiscussions || []).find(d => d.section_id === item.selectedDiscussionId);
+
+        // Lecture meetings
+        (currentLec?.meetings || []).forEach(lecM => {
+          if (lecM && lecM.days && lecM.time) {
+            const parsed = parseTimeStr(lecM.time);
+            if (parsed) {
+              const cleanLoc = cleanLocation(lecM.location);
+              parseDaysString(lecM.days).forEach(dayLetter => {
+                allMeetings.push({
+                  dayLetter,
+                  startMin: parsed.start,
+                  endMin: parsed.end,
+                  code: item.displayCode,
+                  label: currentLec.section_id,
+                  location: cleanLoc,
+                  isDisc: false,
+                  rawKey: item.rawKey
+                });
+              });
+            }
+          }
+        });
+
+        // Selected Discussion meetings
+        (currentDisc?.meetings || []).forEach(discM => {
+          if (discM && discM.days && discM.time) {
+            const parsed = parseTimeStr(discM.time);
+            if (parsed) {
+              const cleanLoc = cleanLocation(discM.location);
+              parseDaysString(discM.days).forEach(dayLetter => {
+                allMeetings.push({
+                  dayLetter,
+                  startMin: parsed.start,
+                  endMin: parsed.end,
+                  code: item.displayCode,
+                  label: currentDisc.section_id,
+                  location: cleanLoc,
+                  isDisc: true,
+                  rawKey: item.rawKey
+                });
+              });
+            }
+          }
+        });
+      });
+      return allMeetings;
+    }
+
+    function previewOriginalSchedule(rankNum) {
+      const card = document.getElementById('rankCard-' + rankNum);
+      if (card) card.classList.add('showing-original');
+      const btn = document.getElementById('btnShowOrig-' + rankNum);
+      if (btn) btn.classList.add('btn-active-preview');
+    }
+
+    function restoreOptimizedSchedule(rankNum) {
+      const card = document.getElementById('rankCard-' + rankNum);
+      if (card) card.classList.remove('showing-original');
+      const btn = document.getElementById('btnShowOrig-' + rankNum);
+      if (btn) btn.classList.remove('btn-active-preview');
+    }
+
+    function checkHasScheduleDifferences(sched) {
+      for (const path of sched.combo) {
+        const item = DRAFT_SCHEDULE.find(c => c.rawKey === path.courseKey);
+        if (!item) return true;
+        if (item.selectedLectureId !== path.lectureId) return true;
+        const origDisc = item.selectedDiscussionId || '';
+        const candDisc = path.discussionId || '';
+        if (origDisc !== candDisc) return true;
+      }
+      return false;
+    }
+
     function renderMiniTimetableHtml(sched, rankNum) {
       const days = ['M', 'T', 'W', 'R', 'F'];
       const dayLabels = { 'M': 'Mon', 'T': 'Tue', 'W': 'Wed', 'R': 'Thu', 'F': 'Fri' };
@@ -5007,6 +5980,19 @@
       const ROW_HEIGHT = 50;
       const GRID_HEIGHT = 12 * ROW_HEIGHT;
       const HEADER_HEIGHT = 30;
+
+      function getBlockMetrics(meeting) {
+        const dayIndex = days.indexOf(meeting.day);
+        if (dayIndex === -1) return null;
+        const clampedStart = Math.max(meeting.start, START_MIN);
+        const clampedEnd = Math.min(meeting.end, START_MIN + TOTAL_MIN);
+        if (clampedEnd <= clampedStart) return null;
+
+        const topPx = HEADER_HEIGHT + ((clampedStart - START_MIN) / TOTAL_MIN) * GRID_HEIGHT;
+        const heightPx = Math.max(36, ((clampedEnd - clampedStart) / TOTAL_MIN) * GRID_HEIGHT);
+        const leftOffset = `calc(60px + (100% - 60px) * ${dayIndex} / 5)`;
+        return { topPx, heightPx, leftOffset };
+      }
 
       // Build grid cells (1 header row + 12 hour rows: 8 AM to 8 PM)
       let cellsHtml = `<div class="cal-cell cal-time-col" style="height: ${HEADER_HEIGHT}px; border-bottom: 1px solid #000000;"></div>`;
@@ -5023,43 +6009,193 @@
         }
       }
 
-      // Build calendar blocks
+      // Gather candidate meetings normalized
+      const candMeetingsByCourse = {};
+      sched.combo.forEach(path => {
+        const courseMeetings = [];
+        (path.meetings || []).forEach(m => {
+          const isDisc = m.type && !m.type.toLowerCase().startsWith('lec') && !m.type.toLowerCase().startsWith('sem');
+          courseMeetings.push({
+            courseKey: path.courseKey,
+            courseCode: path.courseCode,
+            day: m.day,
+            start: m.start,
+            end: m.end,
+            type: m.type,
+            location: cleanLocation(m.location || 'TBD'),
+            isDisc: !!isDisc
+          });
+        });
+        candMeetingsByCourse[path.courseKey] = courseMeetings;
+      });
+
+      // Gather original meetings normalized
+      const origMeetingsRaw = getDraftOriginalMeetings();
+      const origMeetingsByCourse = {};
+      origMeetingsRaw.forEach(m => {
+        if (!origMeetingsByCourse[m.rawKey]) {
+          origMeetingsByCourse[m.rawKey] = [];
+        }
+        origMeetingsByCourse[m.rawKey].push({
+          courseKey: m.rawKey,
+          courseCode: m.code,
+          day: m.dayLetter,
+          start: m.startMin,
+          end: m.endMin,
+          type: m.label,
+          location: cleanLocation(m.location || 'TBD'),
+          isDisc: !!m.isDisc
+        });
+      });
+
+      const allCourseKeys = new Set([
+        ...Object.keys(candMeetingsByCourse),
+        ...Object.keys(origMeetingsByCourse)
+      ]);
+
       let blocksHtml = '';
 
-      sched.combo.forEach(path => {
-        (path.meetings || []).forEach(m => {
-          const dayIndex = days.indexOf(m.day);
-          if (dayIndex === -1) return;
+      allCourseKeys.forEach(courseKey => {
+        const candList = [...(candMeetingsByCourse[courseKey] || [])];
+        const origList = [...(origMeetingsByCourse[courseKey] || [])];
+        const col = getCourseColor(courseKey);
 
-          const clampedStart = Math.max(m.start, START_MIN);
-          const clampedEnd = Math.min(m.end, START_MIN + TOTAL_MIN);
-          if (clampedEnd <= clampedStart) return;
+        const pairs = [];
+        const candOnly = [];
+        const origRemaining = [...origList];
 
-          const topPx = HEADER_HEIGHT + ((clampedStart - START_MIN) / TOTAL_MIN) * GRID_HEIGHT;
-          const heightPx = Math.max(36, ((clampedEnd - clampedStart) / TOTAL_MIN) * GRID_HEIGHT);
-          const leftOffset = `calc(60px + (100% - 60px) * ${dayIndex} / 5)`;
-          const blockWidth = `calc((100% - 60px) / 5 - 4px)`;
-
-          const col = getCourseColor(path.courseKey);
-          const isDisc = m.type && !m.type.toLowerCase().startsWith('lec') && !m.type.toLowerCase().startsWith('sem');
-          const loc = cleanLocation(m.location);
-
-          let styleStr = `position: absolute; top: ${topPx}px; height: ${heightPx}px; left: ${leftOffset}; width: ${blockWidth}; z-index: 10; border-radius: 4px; padding: 3px 5px; overflow: hidden; line-height: 1.25; box-shadow: 0 1px 2px rgba(0,0,0,0.08); box-sizing: border-box;`;
-
-          if (isDisc) {
-            styleStr += ` background: ${col.tintBg}; color: ${col.darkText}; border: 1.5px solid ${col.solid}; border-left: 5px solid ${col.solid};`;
+        // Pass 1: exact match by isDisc & day
+        for (const c of candList) {
+          const mIdx = origRemaining.findIndex(o => o.isDisc === c.isDisc && o.day === c.day);
+          if (mIdx !== -1) {
+            pairs.push({ cand: c, orig: origRemaining[mIdx] });
+            origRemaining.splice(mIdx, 1);
           } else {
-            styleStr += ` background: ${col.solid}; color: #ffffff; border: 1px solid ${col.border};`;
+            candOnly.push(c);
+          }
+        }
+
+        // Pass 2: match remaining by same isDisc
+        const stillCandOnly = [];
+        for (const c of candOnly) {
+          const mIdx = origRemaining.findIndex(o => o.isDisc === c.isDisc);
+          if (mIdx !== -1) {
+            pairs.push({ cand: c, orig: origRemaining[mIdx] });
+            origRemaining.splice(mIdx, 1);
+          } else {
+            stillCandOnly.push(c);
+          }
+        }
+
+        // Pass 3: match any remaining
+        const finalCandOnly = [];
+        for (const c of stillCandOnly) {
+          if (origRemaining.length > 0) {
+            pairs.push({ cand: c, orig: origRemaining.shift() });
+          } else {
+            finalCandOnly.push(c);
+          }
+        }
+
+        // Render morphing paired blocks
+        pairs.forEach(p => {
+          const optM = getBlockMetrics(p.cand);
+          const origM = getBlockMetrics(p.orig);
+          if (!optM || !origM) return;
+
+          const isDisc = p.cand.isDisc;
+          let styleBg = col.solid;
+          let styleColor = '#ffffff';
+          let styleBorder = `1px solid ${col.border}`;
+          if (isDisc) {
+            styleBg = col.tintBg;
+            styleColor = col.darkText;
+            styleBorder = `1.5px solid ${col.solid}; border-left: 5px solid ${col.solid}`;
+          }
+
+          const hasTypeDiff = p.cand.type !== p.orig.type;
+          const hasLocDiff = p.cand.location !== p.orig.location;
+          const titleText = `${p.cand.courseCode} ${p.cand.type} (${formatMinutes(p.cand.start)}–${formatMinutes(p.cand.end)}) • ${p.cand.location}`;
+
+          blocksHtml += `
+            <div class="cal-morph-block" style="
+              --opt-top: ${optM.topPx}px;
+              --opt-left: ${optM.leftOffset};
+              --opt-height: ${optM.heightPx}px;
+              --orig-top: ${origM.topPx}px;
+              --orig-left: ${origM.leftOffset};
+              --orig-height: ${origM.heightPx}px;
+              background: ${styleBg};
+              color: ${styleColor};
+              border: ${styleBorder};
+            " title="${titleText}">
+              <div style="font-weight: 800; font-size: 0.72rem; display: flex; justify-content: space-between; align-items: baseline; gap: 3px; white-space: nowrap; overflow: hidden;">
+                <span>${p.cand.courseCode}</span>
+                ${hasTypeDiff 
+                  ? `<span class="lbl-opt" style="font-size: 0.64rem; font-weight: 700; ${isDisc ? `color: ${col.darkText}` : 'color: #ffffff'};">${p.cand.type}</span>
+                     <span class="lbl-orig" style="font-size: 0.64rem; font-weight: 700; ${isDisc ? `color: ${col.darkText}` : 'color: #ffffff'};">${p.orig.type}</span>`
+                  : `<span style="font-size: 0.64rem; font-weight: 700; ${isDisc ? `color: ${col.darkText}` : 'color: #ffffff'};">${p.cand.type}</span>`
+                }
+              </div>
+              <div style="opacity: 0.95; font-size: 0.67rem; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;" title="${p.cand.location}">
+                ${hasLocDiff 
+                  ? `<span class="lbl-opt">${p.cand.location}</span><span class="lbl-orig">${p.orig.location}</span>`
+                  : `${p.cand.location}`
+                }
+              </div>
+            </div>
+          `;
+        });
+
+        // Render cand-only blocks
+        finalCandOnly.forEach(c => {
+          const m = getBlockMetrics(c);
+          if (!m) return;
+          const isDisc = c.isDisc;
+          let styleBg = col.solid;
+          let styleColor = '#ffffff';
+          let styleBorder = `1px solid ${col.border}`;
+          if (isDisc) {
+            styleBg = col.tintBg;
+            styleColor = col.darkText;
+            styleBorder = `1.5px solid ${col.solid}; border-left: 5px solid ${col.solid}`;
           }
 
           blocksHtml += `
-            <div class="cal-block" style="${styleStr}" title="${path.courseCode} ${m.type} (${formatMinutes(m.start)}–${formatMinutes(m.end)}) • ${loc}">
+            <div class="cal-opt-only" style="top: ${m.topPx}px; left: ${m.leftOffset}; height: ${m.heightPx}px; background: ${styleBg}; color: ${styleColor}; border: ${styleBorder};" title="${c.courseCode} ${c.type} (${formatMinutes(c.start)}–${formatMinutes(c.end)}) • ${c.location}">
               <div style="font-weight: 800; font-size: 0.72rem; display: flex; justify-content: space-between; align-items: baseline; gap: 3px; white-space: nowrap; overflow: hidden;">
-                <span>${path.courseCode}</span>
-                <span style="font-size: 0.64rem; font-weight: 700; ${isDisc ? `color: ${col.darkText}` : 'color: #ffffff'};">${m.type}</span>
+                <span>${c.courseCode}</span>
+                <span style="font-size: 0.64rem; font-weight: 700; ${isDisc ? `color: ${col.darkText}` : 'color: #ffffff'};">${c.type}</span>
               </div>
-              <div style="opacity: 0.95; font-size: 0.67rem; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;" title="${loc}">
-                ${loc}
+              <div style="opacity: 0.95; font-size: 0.67rem; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;">
+                ${c.location}
+              </div>
+            </div>
+          `;
+        });
+
+        // Render orig-only blocks
+        origRemaining.forEach(o => {
+          const m = getBlockMetrics(o);
+          if (!m) return;
+          const isDisc = o.isDisc;
+          let styleBg = col.solid;
+          let styleColor = '#ffffff';
+          let styleBorder = `1px solid ${col.border}`;
+          if (isDisc) {
+            styleBg = col.tintBg;
+            styleColor = col.darkText;
+            styleBorder = `1.5px solid ${col.solid}; border-left: 5px solid ${col.solid}`;
+          }
+
+          blocksHtml += `
+            <div class="cal-orig-only" style="top: ${m.topPx}px; left: ${m.leftOffset}; height: ${m.heightPx}px; background: ${styleBg}; color: ${styleColor}; border: ${styleBorder};" title="Original: ${o.courseCode} ${o.type} (${formatMinutes(o.start)}–${formatMinutes(o.end)}) • ${o.location}">
+              <div style="font-weight: 800; font-size: 0.72rem; display: flex; justify-content: space-between; align-items: baseline; gap: 3px; white-space: nowrap; overflow: hidden;">
+                <span>${o.courseCode}</span>
+                <span style="font-size: 0.64rem; font-weight: 700; ${isDisc ? `color: ${col.darkText}` : 'color: #ffffff'};">${o.type}</span>
+              </div>
+              <div style="opacity: 0.95; font-size: 0.67rem; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;">
+                ${o.location}
               </div>
             </div>
           `;
@@ -5071,7 +6207,9 @@
           <div style="position: relative; overflow-x: auto; background: #ffffff; border: 1px solid #000000; border-radius: 4px; padding: 8px;">
             <div style="display: grid; grid-template-columns: 60px repeat(5, 1fr); grid-template-rows: ${HEADER_HEIGHT}px repeat(12, ${ROW_HEIGHT}px); gap: 1px; background: #e4e4e7; border: 1px solid #000000; border-radius: 3px; position: relative; min-width: 520px;">
               ${cellsHtml}
-              ${blocksHtml}
+              <div class="cal-blocks-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+                ${blocksHtml}
+              </div>
             </div>
           </div>
         </div>
@@ -5122,14 +6260,24 @@
 
       displaySchedules.forEach((sched, idx) => {
         const rankNum = idx + 1;
+        const hasDiff = checkHasScheduleDifferences(sched);
+
+        const showOrigBtnHtml = hasDiff
+          ? `<button type="button" class="btn btn-secondary btn-sm btn-show-original" id="btnShowOrig-${rankNum}" onmouseenter="previewOriginalSchedule(${rankNum})" onmouseleave="restoreOptimizedSchedule(${rankNum})" onclick="event.preventDefault()" title="Hover to view your original draft schedule">
+               Show Original
+             </button>`
+          : `<button type="button" class="btn btn-secondary btn-sm btn-show-original" id="btnShowOrig-${rankNum}" disabled title="This schedule already matches your current draft schedule">
+               Matches Original Draft
+             </button>`;
 
         ranksHtml += `
           <div class="rank-card" id="rankCard-${rankNum}" style="margin-bottom: 20px;">
-            <div class="rank-card-header" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid #e4e4e7;">
+            <div class="rank-card-header" style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid #e4e4e7; flex-wrap: wrap; gap: 8px;">
               <div class="rank-title" style="font-size: 1.05rem; font-weight: 700; color: #000000; display: flex; align-items: center; gap: 8px;">
                 <span>${ICONS.calendar}</span> Possible Schedule ${rankNum}
               </div>
-              <div class="rank-badges">
+              <div class="rank-badges" style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                ${showOrigBtnHtml}
                 <button class="btn btn-primary btn-sm btn-apply-rank" onclick="applyOptimizedScheduleByIndex(${idx})" style="font-size: 0.80rem; padding: 5px 14px;">
                   Apply This Schedule
                 </button>
@@ -5226,8 +6374,8 @@
     window.addEventListener('DOMContentLoaded', () => {
       populateMajorsDropdown();
       loadSavedProfile();
-      loadSavedDraftSchedule();
       initDatabase();
+      loadSavedDraftSchedule();
     });
   </script>
 </body>
