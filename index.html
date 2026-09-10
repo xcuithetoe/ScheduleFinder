@@ -2001,7 +2001,7 @@
     <div class="card collapsed-profile-bar" id="step1CollapsedBar" style="display: flex;">
       <div class="collapsed-profile-left">
         <span class="collapsed-profile-tag"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Personal Characteristics:</span>
-        <span id="collapsedSummaryText" class="collapsed-profile-summary">New Freshman • Freshman (1st Year) • Undeclared</span>
+        <span id="collapsedSummaryText" class="collapsed-profile-summary">Incoming Freshman • Freshman (1st Year) • Undeclared</span>
       </div>
       <div style="display: flex; gap: 8px;">
         <button class="btn btn-secondary btn-sm" onclick="openOnboardingWizard()" title="Launch Profile Setup Wizard"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Setup Wizard</button>
@@ -2018,11 +2018,11 @@
       <div class="profile-grid">
         <!-- Student Admission Status -->
         <div class="form-group" style="grid-column: 1 / -1;">
-          <label>Student Admission Type:</label>
+          <label>Enrollment Status:</label>
           <div class="radio-group">
             <label class="radio-pill">
               <input type="radio" name="studentType" value="new_freshman" checked onchange="updateProfileDefaults()">
-              <div class="radio-pill-content">New Freshman</div>
+              <div class="radio-pill-content">Incoming Freshman</div>
             </label>
             <label class="radio-pill">
               <input type="radio" name="studentType" value="new_transfer" onchange="updateProfileDefaults()">
@@ -2030,7 +2030,7 @@
             </label>
             <label class="radio-pill">
               <input type="radio" name="studentType" value="continuing" onchange="updateProfileDefaults()">
-              <div class="radio-pill-content">Continuing</div>
+              <div class="radio-pill-content">Current Student</div>
             </label>
             <label class="radio-pill">
               <input type="radio" name="studentType" value="graduate" onchange="updateProfileDefaults()">
@@ -2070,29 +2070,9 @@
           <label for="minorInput">Minor (Optional):</label>
           <input type="text" id="minorInput" class="input-text" placeholder="e.g. Labor Studies, Gender Studies..." oninput="saveProfile()">
         </div>
-
-        <!-- Special Permissions & Honors -->
-        <div class="form-group">
-          <label>Special Permissions / Status:</label>
-          <label class="checkbox-item">
-            <input type="checkbox" id="chkHonors" onchange="saveProfile()">
-            <span>College Honors Program Student</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" id="chkDeptConsent" onchange="saveProfile()">
-            <span>Department Consent Obtained (PTE / Approval)</span>
-          </label>
-          <label class="checkbox-item">
-            <input type="checkbox" id="chkInstructorConsent" onchange="saveProfile()">
-            <span>Instructor Consent Obtained</span>
-          </label>
-        </div>
       </div>
 
-      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #e4e4e7; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-        <span style="font-size: 0.8rem; color: var(--text-muted); display: inline-flex; align-items: center; gap: 6px;">
-          <svg class="ui-icon" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg> Personal characteristics auto-save to browser storage
-        </span>
+      <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #e4e4e7; display: flex; justify-content: flex-end;">
         <button class="btn btn-primary" onclick="collapseProfile()">Save & Collapse Step 1 ↑</button>
       </div>
     </div>
@@ -2221,15 +2201,15 @@
         
         <!-- Progress Bar & Step Tracker -->
         <div class="wizard-progress-bar">
-          <div class="wizard-progress-fill" id="wizardProgressFill" style="width: 25%;"></div>
+          <div class="wizard-progress-fill" id="wizardProgressFill" style="width: 33.3%;"></div>
         </div>
-        <div class="wizard-step-label" id="wizardStepLabel">Question 1 of 4: Admission Status</div>
+        <div class="wizard-step-label" id="wizardStepLabel">Question 1 of 3: Enrollment Status</div>
       </div>
 
       <div class="login-dialog-body" id="wizardBody">
-        <!-- Question 1: Admission Status -->
+        <!-- Question 1: Enrollment Status -->
         <div class="wizard-question-pane" id="wizardPane1">
-          <div class="wizard-question-title">What is your student admission status?</div>
+          <div class="wizard-question-title">What is your enrollment status?</div>
           <p class="wizard-question-desc">Select your status. Orientation restrictions and course enrollment holds depend on this.</p>
           <div class="wizard-options-grid">
             <label class="wizard-option-card">
@@ -2237,8 +2217,8 @@
               <div class="wizard-card-box">
                 <div class="wizard-card-icon"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"></path></svg></div>
                 <div class="wizard-card-text">
-                  <strong>New Freshman</strong>
-                  <span>Entering UCLA as a first-year undergraduate student</span>
+                  <strong>Incoming Freshman</strong>
+                  <span>Preparing for New Student Orientation</span>
                 </div>
               </div>
             </label>
@@ -2257,7 +2237,7 @@
               <div class="wizard-card-box">
                 <div class="wizard-card-icon"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                 <div class="wizard-card-text">
-                  <strong>Continuing Student</strong>
+                  <strong>Current Student</strong>
                   <span>Currently enrolled UCLA undergraduate student</span>
                 </div>
               </div>
@@ -2318,7 +2298,7 @@
           </div>
         </div>
 
-        <!-- Question 3: Major / Subject Area -->
+        <!-- Question 3: Major & Minor -->
         <div class="wizard-question-pane" id="wizardPane3" style="display: none;">
           <div class="wizard-question-title">What is your primary major or department?</div>
           <p class="wizard-question-desc">Major-restricted courses (e.g. CS, Engineering, Economics, Global Studies) evaluate this field.</p>
@@ -2339,32 +2319,9 @@
               Check this if you are completing prep courses for the major. Uncheck if you are officially in the primary major or in Engineering where premajors do not apply.
             </p>
           </div>
-        </div>
-
-        <!-- Question 4: Minor & Special Designations -->
-        <div class="wizard-question-pane" id="wizardPane4" style="display: none;">
-          <div class="wizard-question-title">Optional: Minor & Special Permissions</div>
-          <p class="wizard-question-desc">Leave blank or uncheck if none apply. You can update these anytime later.</p>
-          <div class="form-group" style="margin-top: 10px;">
+          <div class="form-group" style="margin-top: 14px;">
             <label for="wizMinorInput" style="font-weight: 700; font-size: 0.86rem; color: #000000; margin-bottom: 4px; display: block;">Minor Program (Optional):</label>
             <input type="text" id="wizMinorInput" class="input-text" placeholder="e.g. Labor Studies, Gender Studies, Cognitive Science..." style="padding: 10px 12px;">
-          </div>
-          <div class="form-group" style="margin-top: 12px;">
-            <label style="font-weight: 700; font-size: 0.86rem; color: #000000; margin-bottom: 6px; display: block;">Special Permissions / Status:</label>
-            <div style="display: flex; flex-direction: column; gap: 8px;">
-              <label class="checkbox-item">
-                <input type="checkbox" id="wizChkHonors">
-                <span>College Honors Program Student</span>
-              </label>
-              <label class="checkbox-item">
-                <input type="checkbox" id="wizChkDeptConsent">
-                <span>Department Consent Obtained (PTE Number / Approval Granted)</span>
-              </label>
-              <label class="checkbox-item">
-                <input type="checkbox" id="wizChkInstructorConsent">
-                <span>Instructor Consent Obtained</span>
-              </label>
-            </div>
           </div>
         </div>
       </div>
@@ -2980,19 +2937,16 @@
         studentType: getSelectedStudentType(),
         standing: document.getElementById('standingSelect').value,
         major: currentMajor,
-        isPreMajor: document.getElementById('chkPreMajor').checked,
-        minor: document.getElementById('minorInput').value.trim(),
-        honors: document.getElementById('chkHonors').checked,
-        deptConsent: document.getElementById('chkDeptConsent').checked,
-        instructorConsent: document.getElementById('chkInstructorConsent').checked
+        isPreMajor: document.getElementById('chkPreMajor')?.checked ?? false,
+        minor: document.getElementById('minorInput')?.value?.trim() || ''
       };
     }
 
     function updateCollapsedSummary(prof) {
       const typeLabels = {
-        'new_freshman': 'New Freshman',
+        'new_freshman': 'Incoming Freshman',
         'new_transfer': 'New Transfer',
-        'continuing': 'Continuing Student',
+        'continuing': 'Current Student',
         'graduate': 'Graduate Student'
       };
       const standingLabels = {
@@ -3009,9 +2963,6 @@
         prof.major + (prof.isPreMajor ? ' (Pre-Major)' : '')
       ];
       if (prof.minor) parts.push(`Minor: ${prof.minor}`);
-      if (prof.honors) parts.push(`College Honors`);
-      if (prof.deptConsent) parts.push(`Dept Consent`);
-      if (prof.instructorConsent) parts.push(`Instructor Consent`);
 
       const summaryElem = document.getElementById('collapsedSummaryText');
       if (summaryElem) {
@@ -3053,9 +3004,9 @@
       const tagsContainer = document.getElementById('profileTags');
       if (!tagsContainer) return;
       const typeLabels = {
-        'new_freshman': 'New Freshman',
+        'new_freshman': 'Incoming Freshman',
         'new_transfer': 'New Transfer',
-        'continuing': 'Continuing Student',
+        'continuing': 'Current Student',
         'graduate': 'Graduate Student'
       };
 
@@ -3074,15 +3025,6 @@
       `;
       if (prof.minor) {
         html += `<span class="profile-tag">${ICONS.tag} Minor: ${prof.minor}</span>`;
-      }
-      if (prof.honors) {
-        html += `<span class="profile-tag">${ICONS.star} College Honors</span>`;
-      }
-      if (prof.deptConsent) {
-        html += `<span class="profile-tag">${ICONS.check} Dept Consent</span>`;
-      }
-      if (prof.instructorConsent) {
-        html += `<span class="profile-tag">${ICONS.check} Instructor Consent</span>`;
       }
 
       tagsContainer.innerHTML = html;
@@ -3134,18 +3076,6 @@
             const el = document.getElementById('minorInput');
             if (el) el.value = prof.minor;
           }
-          if (prof.honors !== undefined) {
-            const el = document.getElementById('chkHonors');
-            if (el) el.checked = prof.honors;
-          }
-          if (prof.deptConsent !== undefined) {
-            const el = document.getElementById('chkDeptConsent');
-            if (el) el.checked = prof.deptConsent;
-          }
-          if (prof.instructorConsent !== undefined) {
-            const el = document.getElementById('chkInstructorConsent');
-            if (el) el.checked = prof.instructorConsent;
-          }
         }
 
         const savedDraft = localStorage.getItem('ucla_saved_draft_schedule');
@@ -3179,13 +3109,12 @@
     // LOGIN-STYLE ONBOARDING PROFILE WIZARD (One-question-at-a-time)
     // -------------------------------------------------------------
     let currentWizStep = 1;
-    const TOTAL_WIZ_STEPS = 4;
+    const TOTAL_WIZ_STEPS = 3;
 
     const WIZ_STEP_TITLES = [
-      "Question 1 of 4: Admission Status",
-      "Question 2 of 4: Academic Standing",
-      "Question 3 of 4: Major & Subject Area",
-      "Question 4 of 4: Special Permissions"
+      "Question 1 of 3: Enrollment Status",
+      "Question 2 of 3: Academic Standing",
+      "Question 3 of 3: Major & Minor"
     ];
 
     function openOnboardingWizard() {
@@ -3223,15 +3152,6 @@
 
       const wizMin = document.getElementById('wizMinorInput');
       if (wizMin) wizMin.value = prof.minor || '';
-
-      const wizHon = document.getElementById('wizChkHonors');
-      if (wizHon) wizHon.checked = !!prof.honors;
-
-      const wizDept = document.getElementById('wizChkDeptConsent');
-      if (wizDept) wizDept.checked = !!prof.deptConsent;
-
-      const wizInst = document.getElementById('wizChkInstructorConsent');
-      if (wizInst) wizInst.checked = !!prof.instructorConsent;
 
       goToWizardStep(1);
       const modal = document.getElementById('onboardingModal');
@@ -3315,9 +3235,6 @@
       const major = document.getElementById('wizMajorInput')?.value?.trim() || document.getElementById('wizMajorSelect')?.value || 'Undeclared';
       const isPreMajor = !!document.getElementById('wizChkPreMajor')?.checked;
       const minor = document.getElementById('wizMinorInput')?.value?.trim() || '';
-      const honors = !!document.getElementById('wizChkHonors')?.checked;
-      const deptConsent = !!document.getElementById('wizChkDeptConsent')?.checked;
-      const instructorConsent = !!document.getElementById('wizChkInstructorConsent')?.checked;
 
       // 2. Transfer to main form
       const mainTypeRad = document.querySelector(`input[name="studentType"][value="${studentType}"]`);
@@ -3346,15 +3263,6 @@
 
       const mainMinor = document.getElementById('minorInput');
       if (mainMinor) mainMinor.value = minor;
-
-      const mainHonors = document.getElementById('chkHonors');
-      if (mainHonors) mainHonors.checked = honors;
-
-      const mainDept = document.getElementById('chkDeptConsent');
-      if (mainDept) mainDept.checked = deptConsent;
-
-      const mainInst = document.getElementById('chkInstructorConsent');
-      if (mainInst) mainInst.checked = instructorConsent;
 
       // 3. Save profile and mark onboarding completed
       saveProfile();
@@ -3587,9 +3495,9 @@
       const minor = profile.minor.trim().toLowerCase();
 
       const studentTypeLabels = {
-        'new_freshman': 'New Freshman',
+        'new_freshman': 'Incoming Freshman',
         'new_transfer': 'New Transfer',
-        'continuing': 'Continuing Student',
+        'continuing': 'Current Student',
         'graduate': 'Graduate Student'
       };
 
@@ -3705,7 +3613,7 @@
           return {
             passed: false,
             rule: 'Department Consent Required',
-            reason: `Requires "Department Consent" before enrollment. (Check this in Step 1 if you have PTE or consent).`
+            reason: `Requires "Department Consent" before enrollment (PTE / approval required). You can override this if you have permission.`
           };
         }
       }
@@ -3715,7 +3623,7 @@
           return {
             passed: false,
             rule: 'Instructor Consent Required',
-            reason: `Requires "Instructor Consent" before enrollment. (Check this in Step 1 if you have instructor approval).`
+            reason: `Requires "Instructor Consent" before enrollment. You can override this if you have permission.`
           };
         }
       }
