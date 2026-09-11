@@ -1,5 +1,5 @@
 // UCLA Course Information Dataset
-window.COURSE_INFO_TIMESTAMP = 1789104444125; // 2026-09-11T05:27:24.125667+00:00
+window.COURSE_INFO_TIMESTAMP = 1789111855298; // 2026-09-11T07:30:55.298904+00:00
 window.COURSE_INFO = {
   "AEROST0001A": {
     "course": {
@@ -28179,9 +28179,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Friedman, M.L.\nGere, D.H.",
-        "status": "Closed",
+        "status": "Open",
         "units": "5.0",
-        "enrollment": {},
+        "enrollment": {
+          "enrolled": 219,
+          "capacity": 220,
+          "spots_left": 1
+        },
         "waitlist": null,
         "meetings": [
           {
@@ -106704,9 +106708,13 @@ window.COURSE_INFO = {
         "indicator": "info",
         "indicator_label": "Class Requisite Information",
         "instructor": "Passos, J.I.",
-        "status": "Waitlist",
+        "status": "Open",
         "units": "4.0",
-        "enrollment": {},
+        "enrollment": {
+          "enrolled": 11,
+          "capacity": 12,
+          "spots_left": 1
+        },
         "waitlist": {
           "taken": 0,
           "capacity": 5
@@ -107101,9 +107109,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 14,
+          "enrolled": 13,
           "capacity": 20,
-          "spots_left": 6
+          "spots_left": 7
         },
         "waitlist": null,
         "meetings": [
@@ -116714,9 +116722,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "1.0",
         "enrollment": {
-          "enrolled": 202,
+          "enrolled": 201,
           "capacity": 300,
-          "spots_left": 98
+          "spots_left": 99
         },
         "waitlist": null,
         "meetings": [
@@ -118953,9 +118961,13 @@ window.COURSE_INFO = {
         "indicator": "warning",
         "indicator_label": "Class Requisite Warning",
         "instructor": "Varghese, G.",
-        "status": "Closed",
+        "status": "Open",
         "units": "4.0",
-        "enrollment": {},
+        "enrollment": {
+          "enrolled": 148,
+          "capacity": 150,
+          "spots_left": 2
+        },
         "waitlist": null,
         "meetings": [
           {
@@ -118972,9 +118984,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "Mondal, R.",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 29,
+              "capacity": 30,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -119058,9 +119074,13 @@ window.COURSE_INFO = {
             "indicator": "warning",
             "indicator_label": "Class Requisite Warning",
             "instructor": "TA",
-            "status": "Closed",
+            "status": "Open",
             "units": "0.0",
-            "enrollment": {},
+            "enrollment": {
+              "enrolled": 29,
+              "capacity": 30,
+              "spots_left": 1
+            },
             "waitlist": null,
             "meetings": [
               {
@@ -124310,9 +124330,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 43,
+          "enrolled": 42,
           "capacity": 60,
-          "spots_left": 17
+          "spots_left": 18
         },
         "waitlist": null,
         "meetings": [
@@ -124333,9 +124353,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 37,
+              "enrolled": 36,
               "capacity": 60,
-              "spots_left": 23
+              "spots_left": 24
             },
             "waitlist": null,
             "meetings": [
@@ -171566,9 +171586,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "5.0",
         "enrollment": {
-          "enrolled": 428,
+          "enrolled": 427,
           "capacity": 440,
-          "spots_left": 12
+          "spots_left": 13
         },
         "waitlist": null,
         "meetings": [
@@ -245694,9 +245714,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 203,
+          "enrolled": 202,
           "capacity": 210,
-          "spots_left": 7
+          "spots_left": 8
         },
         "waitlist": null,
         "meetings": [
@@ -246785,9 +246805,9 @@ window.COURSE_INFO = {
         "status": "Open",
         "units": "4.0",
         "enrollment": {
-          "enrolled": 130,
+          "enrolled": 129,
           "capacity": 210,
-          "spots_left": 80
+          "spots_left": 81
         },
         "waitlist": null,
         "meetings": [
@@ -247735,9 +247755,13 @@ window.COURSE_INFO = {
         "indicator": "info",
         "indicator_label": "Class Requisite Information",
         "instructor": "Moraga, J.",
-        "status": "Closed",
+        "status": "Open",
         "units": "4.0",
-        "enrollment": {},
+        "enrollment": {
+          "enrolled": 39,
+          "capacity": 40,
+          "spots_left": 1
+        },
         "waitlist": null,
         "meetings": [
           {
@@ -310650,9 +310674,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 21,
+              "enrolled": 20,
               "capacity": 23,
-              "spots_left": 2
+              "spots_left": 3
             },
             "waitlist": null,
             "meetings": [
@@ -310796,9 +310820,9 @@ window.COURSE_INFO = {
             "status": "Open",
             "units": "0.0",
             "enrollment": {
-              "enrolled": 17,
+              "enrolled": 18,
               "capacity": 23,
-              "spots_left": 6
+              "spots_left": 5
             },
             "waitlist": null,
             "meetings": [
