@@ -2021,7 +2021,7 @@
           <label>Enrollment Status:</label>
           <div class="radio-group">
             <label class="radio-pill">
-              <input type="radio" name="studentType" value="new_freshman" checked onchange="updateProfileDefaults()">
+              <input type="radio" name="studentType" value="new_freshman" onchange="updateProfileDefaults()">
               <div class="radio-pill-content">Incoming Freshman</div>
             </label>
             <label class="radio-pill">
@@ -2029,7 +2029,7 @@
               <div class="radio-pill-content">New Transfer</div>
             </label>
             <label class="radio-pill">
-              <input type="radio" name="studentType" value="continuing" onchange="updateProfileDefaults()">
+              <input type="radio" name="studentType" value="continuing" checked onchange="updateProfileDefaults()">
               <div class="radio-pill-content">Current Student</div>
             </label>
             <label class="radio-pill">
@@ -2044,7 +2044,7 @@
           <label for="standingSelect">Academic Standing:</label>
           <select id="standingSelect" onchange="saveProfile()">
             <option value="freshman">Freshman (1st Year)</option>
-            <option value="sophomore">Sophomore (2nd Year)</option>
+            <option value="sophomore" selected>Sophomore (2nd Year)</option>
             <option value="junior">Junior (3rd Year)</option>
             <option value="senior">Senior (4th Year+)</option>
             <option value="graduate">Graduate Student</option>
@@ -2213,7 +2213,7 @@
           <p class="wizard-question-desc">Select your status. Orientation restrictions and course enrollment holds depend on this.</p>
           <div class="wizard-options-grid">
             <label class="wizard-option-card">
-              <input type="radio" name="wizStudentType" value="new_freshman" checked onchange="handleWizTypeChange()">
+              <input type="radio" name="wizStudentType" value="new_freshman" onchange="handleWizTypeChange()">
               <div class="wizard-card-box">
                 <div class="wizard-card-icon"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"></path></svg></div>
                 <div class="wizard-card-text">
@@ -2233,7 +2233,7 @@
               </div>
             </label>
             <label class="wizard-option-card">
-              <input type="radio" name="wizStudentType" value="continuing" onchange="handleWizTypeChange()">
+              <input type="radio" name="wizStudentType" value="continuing" checked onchange="handleWizTypeChange()">
               <div class="wizard-card-box">
                 <div class="wizard-card-icon"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                 <div class="wizard-card-text">
@@ -2261,14 +2261,14 @@
           <p class="wizard-question-desc">Standing is determined by completed quarter units and governs course level eligibility.</p>
           <div class="wizard-options-list">
             <label class="wizard-option-row">
-              <input type="radio" name="wizStanding" value="freshman" checked>
+              <input type="radio" name="wizStanding" value="freshman">
               <div class="wizard-row-box">
                 <strong>Freshman (1st Year)</strong>
                 <span>0 – 44.9 quarter units completed</span>
               </div>
             </label>
             <label class="wizard-option-row">
-              <input type="radio" name="wizStanding" value="sophomore">
+              <input type="radio" name="wizStanding" value="sophomore" checked>
               <div class="wizard-row-box">
                 <strong>Sophomore (2nd Year)</strong>
                 <span>45 – 89.9 quarter units completed</span>
@@ -2898,7 +2898,7 @@
     // -------------------------------------------------------------
     function getSelectedStudentType() {
       const radio = document.querySelector('input[name="studentType"]:checked');
-      return radio ? radio.value : 'new_freshman';
+      return radio ? radio.value : 'continuing';
     }
 
     function updateProfileDefaults() {
@@ -3227,10 +3227,10 @@
     function completeWizard() {
       // 1. Read wizard values
       const typeRad = document.querySelector('input[name="wizStudentType"]:checked');
-      const studentType = typeRad ? typeRad.value : 'new_freshman';
+      const studentType = typeRad ? typeRad.value : 'continuing';
 
       const standRad = document.querySelector('input[name="wizStanding"]:checked');
-      const standing = standRad ? standRad.value : 'freshman';
+      const standing = standRad ? standRad.value : 'sophomore';
 
       const major = document.getElementById('wizMajorInput')?.value?.trim() || document.getElementById('wizMajorSelect')?.value || 'Undeclared';
       const isPreMajor = !!document.getElementById('wizChkPreMajor')?.checked;
